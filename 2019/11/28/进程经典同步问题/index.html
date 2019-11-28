@@ -10,7 +10,7 @@
     <title>进程经典同步问题 | JoviHLB-Blog</title>
     <meta name="author" content="黄立兵" />
     <meta name="keywords" content="" />
-    <meta name="description" content="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法生产者消费者问题：①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。 ②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。 PV操作题目分析的步骤：1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。2.整理思..." />
+    <meta name="description" content="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法生产者消费者问题：①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。 ②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。PV操作题目分析的步骤：1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。2.整理思路。根据各..." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -97,7 +97,7 @@
         
 
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><span class="toc-number">1.</span> <span class="toc-text">哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#生产者消费者问题："><span class="toc-number">1.0.0.1.</span> <span class="toc-text">生产者消费者问题：</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><span class="toc-number">1.</span> <span class="toc-text">哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#生产者消费者问题："><span class="toc-number">1.0.0.1.</span> <span class="toc-text">生产者消费者问题：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#银行家算法："><span class="toc-number">1.0.0.2.</span> <span class="toc-text">银行家算法：</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
 </aside>
@@ -105,7 +105,7 @@
 </header>
 
         <div id="content" class="content">
-            <div id="wrapper" class="wrapper" style="max-width: 2000px">
+            <div id="wrapper" class="wrapper" style="max-width: 800px">
                 <article class="article" itemscope itemprop="blogPost">
     
     <header class="article-header">
@@ -135,18 +135,11 @@
     <section class="article-body markdown-body">
         
         <h2 id="哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><a href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法" class="headerlink" title="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法"></a>哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</h2><hr>
-<h5 id="生产者消费者问题："><a href="#生产者消费者问题：" class="headerlink" title="生产者消费者问题："></a>生产者消费者问题：</h5><img src="https://github.com/JoviHLB/CPSE/raw/master/image/1.JPG" height="300" width="1000">
+<h5 id="生产者消费者问题："><a href="#生产者消费者问题：" class="headerlink" title="生产者消费者问题："></a>生产者消费者问题：</h5><p>①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。<br> </p>
 <a id="more"></a>
-①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。<br> 
-②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。<br> 
-PV操作题目分析的步骤：<br>
-1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。<br>
-2.整理思路。根据各进程的操作流程确定PV操作的大致顺序。<br>
-3.设置信号量。设置需要的信号量，并根据题目条件确定信号量的初值。
-`code：`<br>
+<p>②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。<br><br>PV操作题目分析的步骤：<br><br>1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。<br><br>2.整理思路。根据各进程的操作流程确定PV操作的大致顺序。<br><br>3.设置信号量。设置需要的信号量，并根据题目条件确定信号量的初值。<br><code>code：</code><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">semaphore mutex = 1;  //互斥信号量</span><br><span class="line">semaphore empty = n;  //同步信号量。空闲缓冲区的数量</span><br><span class="line">semaphore full = 0;   //同步信号量。产品的数量，非空缓冲区的数量</span><br><span class="line">producer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      生成一个产品;</span><br><span class="line">      P(empty); //消耗一个空闲缓冲区</span><br><span class="line">      P(mutex);</span><br><span class="line">      把产品放入缓冲区;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(full)   //增加一个产品</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">consumer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      P(full);   //消耗一个产品</span><br><span class="line">      P(mutex);</span><br><span class="line">      从缓冲区取出一个产品;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(empty);  //增加一个空闲缓冲区</span><br><span class="line">      使用产品;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-##### 银行家算法：
-
+<h5 id="银行家算法："><a href="#银行家算法：" class="headerlink" title="银行家算法："></a>银行家算法：</h5>
         
     </section>
 </article>
