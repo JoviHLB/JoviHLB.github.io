@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>进程经典同步问题</title>
+    <url>/2019/11/28/%E8%BF%9B%E7%A8%8B%E7%BB%8F%E5%85%B8%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><a href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法" class="headerlink" title="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法"></a>哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</h2><hr>
+<h5 id="生产者消费者问题："><a href="#生产者消费者问题：" class="headerlink" title="生产者消费者问题："></a>生产者消费者问题：</h5><p>①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。<br> </p>
+<a id="more"></a>
+<p>②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。<br><br>PV操作题目分析的步骤：<br><br>1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。<br><br>2.整理思路。根据各进程的操作流程确定PV操作的大致顺序。<br><br>3.设置信号量。设置需要的信号量，并根据题目条件确定信号量的初值。<br><code>code：</code><br></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore mutex = 1;  //互斥信号量</span><br><span class="line">semaphore empty = n;  //同步信号量。空闲缓冲区的数量</span><br><span class="line">semaphore full = 0;   //同步信号量。产品的数量，非空缓冲区的数量</span><br><span class="line">producer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      生成一个产品;</span><br><span class="line">      P(empty); //消耗一个空闲缓冲区</span><br><span class="line">      P(mutex);</span><br><span class="line">      把产品放入缓冲区;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(full)   //增加一个产品</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">consumer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      P(full);   //消耗一个产品</span><br><span class="line">      P(mutex);</span><br><span class="line">      从缓冲区取出一个产品;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(empty);  //增加一个空闲缓冲区</span><br><span class="line">      使用产品;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="银行家算法："><a href="#银行家算法：" class="headerlink" title="银行家算法："></a>银行家算法：</h5>]]></content>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring介绍</title>
+    <url>/2019/11/27/%E6%98%A5%E5%A4%A9spring/</url>
+    <content><![CDATA[<p>Spring框架是由于软件开发的复杂性而创建的。<br><br>Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。<br>然而，Spring的用途不仅仅限于服务器端的开发。从简单性、可测试性和松耦合性角度而言，<br>绝大部分Java应用都可以从Spring中受益。<br></p>
+<a id="more"></a>
+<p>◆·目的·：解决企业应用开发的复杂性<br><br>◆·功能·：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能<br><br>◆·范围·：任何Java应用<br><br><br><br>Spring是一个轻量级控制反转(IoC)和面向切面(AOP)的容器框架。</p>
+]]></content>
+      <categories>
+        <category>back-end</category>
+      </categories>
+      <tags>
+        <tag>spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>这是我的第一篇博客<br></p>
+]]></content>
+      <categories>
+        <category>front-end</category>
+      </categories>
+      <tags>
+        <tag>md</tag>
+      </tags>
+  </entry>
+</search>
