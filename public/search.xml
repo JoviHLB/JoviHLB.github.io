@@ -33,7 +33,8 @@ Semaphore stcik[5]={1,1,1,1,1}
 <p><code>读写公平:</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0; </span><br><span class="line">semaphore mutex=1, rw=1 w=1; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">        wait (w);</span><br><span class="line">        wait (mutex);</span><br><span class="line">        if (readcount == 0)</span><br><span class="line">	       wait(rw);</span><br><span class="line">    	readcount++;	</span><br><span class="line">    	signal (mutex);</span><br><span class="line">        signal (w);</span><br><span class="line">		…</span><br><span class="line">    	   reading is performed</span><br><span class="line">		 …</span><br><span class="line">    	wait (mutex);</span><br><span class="line">    	readcount--;</span><br><span class="line">    	if (readcount == 0)</span><br><span class="line">    		signal (rw);</span><br><span class="line">    	signal (mutex);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">    wait(w);</span><br><span class="line">    wait(rw);</span><br><span class="line">	    …</span><br><span class="line">         writing is performed</span><br><span class="line">	    …</span><br><span class="line">    signal(rw);</span><br><span class="line">    signal(w);</span><br></pre></td></tr></table></figure>
 <h4 id="银行家算法："><a href="#银行家算法：" class="headerlink" title="银行家算法："></a>银行家算法：</h4><pre><code>参照该博客学的：&lt;br&gt;
-https://blog.csdn.net/qq_40693171/article/details/84780224</code></pre>]]></content>
+https://blog.csdn.net/qq_40693171/&lt;br&gt;
+article/details/84780224</code></pre>]]></content>
       <tags>
         <tag>操作系统</tag>
       </tags>
