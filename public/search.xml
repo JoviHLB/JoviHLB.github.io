@@ -4,6 +4,7 @@
     <title>jsp上机实验</title>
     <url>/2019/12/02/jsp%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/</url>
     <content><![CDATA[<h3 id="大三上学期jsp实验"><a href="#大三上学期jsp实验" class="headerlink" title="大三上学期jsp实验"></a>大三上学期jsp实验</h3><h4 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h4><p>实验任务<br>1 编写JSP页面rect.jsp实现如下表单。输入数字显示长方形面积，输入非数字有提示。如下图所示。</p>
+<a id="more"></a>
 <p>2编写JSP页面实现如下用户登录页面。输入用户名”admin”密码”123”显示登录成功。否则显示用户名和密码不正确。没有输入用户名或者密码提示，不能为空。<br>提示：判断字符串s1和s2是否相等。 s1.equals(s2)==true</p>
 <p><code>答案1：</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;&lt;BODY&gt;</span><br><span class="line"> &lt;P&gt; 请输入矩形的长和宽:</span><br><span class="line">  &lt;FORM action=&quot;&quot; method=post name=form&gt;</span><br><span class="line">       &lt;P&gt;请输入长方形的长:&lt;INPUT type=&quot;text&quot; name=&quot;a&quot;&gt;</span><br><span class="line">       &lt;P&gt;请输入长方形的宽:&lt;INPUT type=&quot;text&quot; name=&quot;b&quot;&gt;</span><br><span class="line">       &lt;INPUT TYPE=&quot;submit&quot; value=&quot;送出&quot; name=submit&gt;</span><br><span class="line">  &lt;/FORM&gt;  </span><br><span class="line"></span><br><span class="line">  &lt;%   String string_a=request.getParameter(&quot;a&quot;),</span><br><span class="line">           string_b=request.getParameter(&quot;b&quot;);</span><br><span class="line">       </span><br><span class="line">           double a=0,b=0;</span><br><span class="line">  %&gt;</span><br><span class="line"></span><br><span class="line">      &lt;%  if(string_a==null)&#123;</span><br><span class="line">            string_a=&quot;0&quot;;</span><br><span class="line">            tring_b=&quot;0&quot;;  </span><br><span class="line">          &#125; </span><br><span class="line">      %&gt;</span><br><span class="line"></span><br><span class="line">       &lt;%  try &#123;   </span><br><span class="line">			a=Double.valueOf(string_a).doubleValue();//把string_a转换给double</span><br><span class="line">			b=Double.valueOf(string_b).doubleValue(); </span><br><span class="line">			double mianji=a*b;</span><br><span class="line">			out.print(&quot;&lt;BR&gt;&quot;+&quot;长方形面积：&quot;+mianji); </span><br><span class="line">           &#125;    </span><br><span class="line">     </span><br><span class="line">			catch(NumberFormatException e)&#123;</span><br><span class="line">				out.print(&quot;&lt;BR&gt;&quot;+&quot;请输入数字字符&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">     %&gt; </span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
@@ -18,39 +19,12 @@
 <p>3.编写一个Tag文件，Sum.tag文件负责计算和显示1！，2！到 n！的和。要求编写一个JSP页面three.jsp, 加载Sum.tag时传递参数n的值。</p>
 <p><code>答案1：</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Rect.tag:</span><br><span class="line">&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;length&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;width&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;P&gt; 这是一个求矩形的面积tag文件</span><br><span class="line">&lt;%</span><br><span class="line">	double l = Double.parseDouble(length);</span><br><span class="line">	double w = Double.parseDouble(width);</span><br><span class="line">	out.println(&quot;矩形面积为：&quot;+l*w);</span><br><span class="line"> %&gt;</span><br><span class="line"> &lt;/P&gt;</span><br><span class="line">One.jsp</span><br><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;%@ taglib tagdir=&quot;/WEB-INF/tags&quot; prefix=&quot;beijing&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;BODY BGCOLOR=yellow&gt;</span><br><span class="line">&lt;font size=8&gt;</span><br><span class="line">&lt;beijing:Rect length=&quot;10&quot; width=&quot;5&quot; /&gt; </span><br><span class="line">&lt;/font&gt;</span><br><span class="line">&lt;/BODY&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
 <p><code>答案2：</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> Tixing.tag:</span><br><span class="line">&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;upper&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;lower&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;height&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;P&gt; 这是一个求梯形的面积tag文件</span><br><span class="line">&lt;%</span><br><span class="line">	double u = Double.parseDouble(upper);</span><br><span class="line">	double l = Double.parseDouble(lower);</span><br><span class="line">	double h = Double.parseDouble(height);</span><br><span class="line">	out.println(&quot;梯形面积为：&quot;+(u+l)*h/2);</span><br><span class="line"> %&gt;</span><br><span class="line"> &lt;/P&gt;</span><br><span class="line">Two.jsp:</span><br><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;%@ taglib tagdir=&quot;/WEB-INF/tags&quot; prefix=&quot;beijing&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;BODY BGCOLOR=yellow&gt;</span><br><span class="line">&lt;font size=8&gt;</span><br><span class="line">&lt;beijing:Tixing upper=&quot;4&quot; lower=&quot;5&quot; height=&quot;2&quot;/&gt; </span><br><span class="line">&lt;/font&gt;</span><br><span class="line">&lt;/BODY&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
 <p><code>答案3：</code></p>
-<pre><code>Sum.tag:
-&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;
-&lt;%@ attribute name=&quot;number&quot; required=&quot;true&quot; %&gt;
-&lt;P&gt; 这是一个求1！ - n！的和
-&lt;%
-    int n = Integer.parseInt(number);
-    int sum = 0;
-    int val = 1;
-    for(int i=1; i&lt;n+1; i++) {
-        val *= i;
-        sum += val;
-    }
-    out.print(&quot;1! - n! 的和为：&quot;+sum);
- %&gt;
- &lt;/P&gt;
-Three.jsp:
-&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;
-&lt;%@ attribute name=&quot;number&quot; required=&quot;true&quot; %&gt;
-&lt;P&gt; 这是一个求1！ - n！的和
-&lt;%
-    int n = Integer.parseInt(number);
-    int sum = 0;
-    int val = 1;
-    for(int i=1; i&lt;n+1; i++) {
-        val *= i;
-        sum += val;
-    }
-    out.print(&quot;1! - n! 的和为：&quot;+sum);
- %&gt;
- &lt;/P&gt;</code></pre>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Sum.tag:</span><br><span class="line">&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;number&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;P&gt; 这是一个求1！ - n！的和</span><br><span class="line">&lt;%</span><br><span class="line">	int n = Integer.parseInt(number);</span><br><span class="line">	int sum = 0;</span><br><span class="line">	int val = 1;</span><br><span class="line">	for(int i=1; i&lt;n+1; i++) &#123;</span><br><span class="line">		val *= i;</span><br><span class="line">		sum += val;</span><br><span class="line">	&#125;</span><br><span class="line">	out.print(&quot;1! - n! 的和为：&quot;+sum);</span><br><span class="line"> %&gt;</span><br><span class="line"> &lt;/P&gt;</span><br><span class="line">Three.jsp:</span><br><span class="line">&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;number&quot; required=&quot;true&quot; %&gt;</span><br><span class="line">&lt;P&gt; 这是一个求1！ - n！的和</span><br><span class="line">&lt;%</span><br><span class="line">	int n = Integer.parseInt(number);</span><br><span class="line">	int sum = 0;</span><br><span class="line">	int val = 1;</span><br><span class="line">	for(int i=1; i&lt;n+1; i++) &#123;</span><br><span class="line">		val *= i;</span><br><span class="line">		sum += val;</span><br><span class="line">	&#125;</span><br><span class="line">	out.print(&quot;1! - n! 的和为：&quot;+sum);</span><br><span class="line"> %&gt;</span><br><span class="line"> &lt;/P&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>front-end</category>
       </categories>
