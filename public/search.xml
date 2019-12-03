@@ -11,14 +11,16 @@
   <entry>
     <title>冯诺依曼体系结构</title>
     <url>/2019/12/02/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>(1)采用存储程序方式，指令和数据不加区别混合存储在同一个存储器中，数据和程序在内存中是没有区别的,它们都是内存中的数据,当EIP指针指向哪 CPU就加载那段内存中的数据,如果是不正确的指令格式,CPU就会发生错误中断. 在现在CPU的保护模式中,每个内存段都有其描述符,这个描述符记录着这个内存段的访问权限(可读,可写,可执行).这就变相的指定了哪些内存中存储的是指令哪些是数据）<br>指令和数据都可以送到运算器进行运算，即由指令组成的程序是可以修改的。</p>
+    <content><![CDATA[<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>(1)采用存储程序方式，指令和数据不加区别混合存储在同一个存储器中，数据和程序在内存中是没有区别的,它们都是内存中的数据,当EIP指针指向哪 CPU就加载那段内存中的数据,如果是不正确的指令格式,CPU就会发生错误中断. 在现在CPU的保护模式中,每个内存段都有其描述符,这个描述符记录着这个内存段的访问权限(可读,可写,可执行).这就变相的指定了哪些内存中存储的是指令哪些是数据）指令和数据都可以送到运算器进行运算，即由指令组成的程序是可以修改的。</p>
+<a id="more"></a>
+
 <p>(2)存储器是按地址访问的线性编址的一维结构，每个单元的位数是固定的。</p>
 <p>(3)指令由操作码和地址组成。操作码指明本指令的操作类型,地址码指明操作数和地址。操作数本身无数据类型的标志，它的数据类型由操作码确定。</p>
 <p>(4)通过执行指令直接发出控制信号控制计算机的操作。指令在存储器中按其执行顺序存放，由指令计数器指明要执行的指令所在的单元地址。指令计数器只有一个，一般按顺序递增，但执行顺序可按运算结果或当时的外界条件而改变。</p>
 <p>(5)以运算器为中心，I/O设备与存储器间的数据传送都要经过运算器。</p>
 <p>(6)数据以二进制表示。</p>
 <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>(1)计算机处理的数据和指令一律用二进制数表示</p>
-<p>(2)顺序执行程序:<br>计算机运行过程中，把要执行的程序和处理的数据首先存入主存储器（内存），计算机执行程序时，将自动地并按顺序从主存储器中取出指令一条一条地执行，这一概念称作顺序执行程序。</p>
+<p>(2)顺序执行程序:<br>    计算机运行过程中，把要执行的程序和处理的数据首先存入主存储器（内存），计算机执行程序时，将自动地并按顺序从主存储器中取出指令一条一条地执行，这一概念称作顺序执行程序。</p>
 <p>(3)计算机硬件由运算器、控制器、存储器、输入设备和输出设备五大部分组成。</p>
 ]]></content>
       <tags>
@@ -63,6 +65,7 @@
     <content><![CDATA[<h3 id="大三上学期jsp实验"><a href="#大三上学期jsp实验" class="headerlink" title="大三上学期jsp实验"></a>大三上学期jsp实验</h3><h4 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h4><p>实验任务<br>1 编写JSP页面rect.jsp实现如下表单。输入数字显示长方形面积，输入非数字有提示。如下图所示。</p>
 <a id="more"></a>
 <p>2编写JSP页面实现如下用户登录页面。输入用户名”admin”密码”123”显示登录成功。否则显示用户名和密码不正确。没有输入用户名或者密码提示，不能为空。<br>提示：判断字符串s1和s2是否相等。 s1.equals(s2)==true</p>
+<p>![rect](<a href="https://github.com/JoviHLB/JoviHLB.github.io/blob/master/images/rect.png" target="_blank" rel="noopener">https://github.com/JoviHLB/JoviHLB.github.io/blob/master/images/rect.png</a> height=”200” width=”300”)<br>![login](<a href="https://github.com/JoviHLB/JoviHLB.github.io/blob/master/images/login.png" target="_blank" rel="noopener">https://github.com/JoviHLB/JoviHLB.github.io/blob/master/images/login.png</a> height=”200” width=”300”)</p>
 <p><code>答案1：</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;&lt;BODY&gt;</span><br><span class="line"> &lt;P&gt; 请输入矩形的长和宽:</span><br><span class="line">  &lt;FORM action=&quot;&quot; method=post name=form&gt;</span><br><span class="line">       &lt;P&gt;请输入长方形的长:&lt;INPUT type=&quot;text&quot; name=&quot;a&quot;&gt;</span><br><span class="line">       &lt;P&gt;请输入长方形的宽:&lt;INPUT type=&quot;text&quot; name=&quot;b&quot;&gt;</span><br><span class="line">       &lt;INPUT TYPE=&quot;submit&quot; value=&quot;送出&quot; name=submit&gt;</span><br><span class="line">  &lt;/FORM&gt;  </span><br><span class="line"></span><br><span class="line">  &lt;%   String string_a=request.getParameter(&quot;a&quot;),</span><br><span class="line">           string_b=request.getParameter(&quot;b&quot;);</span><br><span class="line">       </span><br><span class="line">           double a=0,b=0;</span><br><span class="line">  %&gt;</span><br><span class="line"></span><br><span class="line">      &lt;%  if(string_a==null)&#123;</span><br><span class="line">            string_a=&quot;0&quot;;</span><br><span class="line">            tring_b=&quot;0&quot;;  </span><br><span class="line">          &#125; </span><br><span class="line">      %&gt;</span><br><span class="line"></span><br><span class="line">       &lt;%  try &#123;   </span><br><span class="line">			a=Double.valueOf(string_a).doubleValue();//把string_a转换给double</span><br><span class="line">			b=Double.valueOf(string_b).doubleValue(); </span><br><span class="line">			double mianji=a*b;</span><br><span class="line">			out.print(&quot;&lt;BR&gt;&quot;+&quot;长方形面积：&quot;+mianji); </span><br><span class="line">           &#125;    </span><br><span class="line">     </span><br><span class="line">			catch(NumberFormatException e)&#123;</span><br><span class="line">				out.print(&quot;&lt;BR&gt;&quot;+&quot;请输入数字字符&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">     %&gt; </span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
 
