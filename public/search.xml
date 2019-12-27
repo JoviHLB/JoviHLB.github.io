@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>python简单语法</title>
+    <title>Java vector</title>
+    <url>/2019/12/08/Java-vector%E7%B1%BB/</url>
+    <content><![CDATA[<p>Java vector 类详解</p>
+<a id="more"></a>
+<p>Vector 可实现自动增长的对象数组</p>
+<p>java.util.vector提供了向量类(Vector)以实现类似动态数组的功能</p>
+<p>创建了一个向量类的对象类后，可以向其中随意插入不同类的对象，即不需要顾及类型、也不需预选定向量的容量， 并可以方便的查找。</p>
+<p>对于预先不知或不愿预先定义数组的大小，并且需要频繁地进行查找，插入，删除工作的情况，可以考虑使用向量类。</p>
+<p>向量类提供了三个构造方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public vector()</span><br><span class="line">public vector(int nitialcapacity,int capacityIncrement)</span><br><span class="line">public vector(int nitialcapacity)</span><br></pre></td></tr></table></figure>
+<p>使用第一种方法，系统会自动对向量进行管理，若使用后两种方法，则系统会根据参数(nitialcapacity)设定向量对象的容量<br>(即向量对象可存储数据的大小)，当真正存放的数据个数超过容量时，系统会扩充向量对象的存储容量。</p>
+<p>参数capacityIncrement给定了每次扩充的扩充值。当capacityIncrement为0的时候，则每一次扩充一倍，利用这个功能可以<br>优化存储。</p>
+<p>Vector 的<code>方法</code>：</p>
+<h5 id="插入功能"><a href="#插入功能" class="headerlink" title="插入功能"></a>插入功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final synchronized void adddElement(Object obj) </span><br><span class="line">插入的应是对象而不是数值，所以插入数值时要注意将数组转换成相应的对象</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void setElementAt(Object obj,int index) </span><br><span class="line">将index处的对象设置成obj，原来的对象将被覆盖</span><br><span class="line"></span><br><span class="line">(3)public final synchronized void insertElementAt(Object obj,int index) </span><br><span class="line">在index指定的位置插入obj，原来对象以及此后的对象依次往后顺延</span><br></pre></td></tr></table></figure>
+<h5 id="删除功能"><a href="#删除功能" class="headerlink" title="删除功能"></a>删除功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final synchronized void removeElement(Object obj)</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void removeAllElement()</span><br><span class="line"></span><br><span class="line">(3)public fianl synchronized void removeElementAt(int index)</span><br></pre></td></tr></table></figure>
+<h5 id="查询搜索功能"><a href="#查询搜索功能" class="headerlink" title="查询搜索功能"></a>查询搜索功能</h5><h5 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h5>]]></content>
+      <tags>
+        <tag>Java Class</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>simple python grammer</title>
     <url>/2019/12/06/python%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4>]]></content>
+    <content><![CDATA[<p>Python 简单语法</p>
+<a id="more"></a>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4>]]></content>
       <tags>
         <tag>python</tag>
       </tags>
   </entry>
   <entry>
-    <title>JVM介绍</title>
+    <title>JVM introduce</title>
     <url>/2019/12/06/JVM%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>JVM(Java 虚拟机)的简单介绍</p>
+<a id="more"></a>
+]]></content>
+      <tags>
+        <tag>JVM</tag>
+      </tags>
   </entry>
   <entry>
     <title>socket套接字</title>
@@ -24,71 +52,65 @@
   <entry>
     <title>计算机网络体系结构</title>
     <url>/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><pre><code>网络协议：
-    为进行网络中的数据交换而建立的规则、标准或约定成为网络协议。
-
-划分层次：
-    1.语法：即数据与控制信息的结构或格式
-
-    2.语义：即需要发出何种信息，完成何种动作以及做出何种反应
-
-    3.同步：即事件实现顺序的详细说明</code></pre>]]></content>
+    <content><![CDATA[<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>网络协议：</p>
+<p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议。</p>
+<p>划分层次：</p>
+<p>1.语法：即数据与控制信息的结构或格式</p>
+<p>2.语义：即需要发出何种信息，完成何种动作以及做出何种反应</p>
+<p>3.同步：即事件实现顺序的详细说明</p>
+]]></content>
       <tags>
         <tag>计算机网络体系结构</tag>
       </tags>
   </entry>
   <entry>
-    <title>maven项目</title>
+    <title>maven project introduce</title>
     <url>/2019/12/06/maven%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>Maven项目介绍</p>
+<a id="more"></a>
+]]></content>
+      <tags>
+        <tag>maven</tag>
+      </tags>
   </entry>
   <entry>
     <title>mybatis</title>
     <url>/2019/12/06/mybatis/</url>
-    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    <content><![CDATA[<p>Mybatis 框架的简单学习</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
       <categories>
         <category>back-end</category>
       </categories>
       <tags>
-        <tag>SSM框架</tag>
+        <tag>SSM framewwork</tag>
       </tags>
   </entry>
   <entry>
-    <title>spring mvc</title>
-    <url>/2019/12/06/spring-mvc/</url>
-    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <categories>
-        <category>back-end</category>
-      </categories>
-      <tags>
-        <tag>SSM框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>栈</title>
+    <title>Stack</title>
     <url>/2019/12/06/%E6%A0%88/</url>
-    <content><![CDATA[<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><pre><code>先进后出，后进先出</code></pre>]]></content>
+    <content><![CDATA[<p>数据结构 - 栈</p>
+<a id="more"></a>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><p>先进后出，后进先出</p>
+]]></content>
       <tags>
-        <tag>数据结构</tag>
+        <tag>DS</tag>
       </tags>
   </entry>
   <entry>
-    <title>链表</title>
+    <title>List</title>
     <url>/2019/12/06/%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[<h3 id="特点-优点"><a href="#特点-优点" class="headerlink" title="特点(优点):"></a>特点(优点):</h3><pre><code>I don&apos;t know ! 嘿嘿</code></pre>]]></content>
+    <content><![CDATA[<p>数据结构 - 链表</p>
+<a id="more"></a>
+<h3 id="特点-优点"><a href="#特点-优点" class="headerlink" title="特点(优点):"></a>特点(优点):</h3><pre><code>I don&apos;t know ! 嘿嘿</code></pre>]]></content>
       <tags>
-        <tag>数据结构</tag>
+        <tag>DS</tag>
       </tags>
   </entry>
   <entry>
     <title>TCP的可靠传输</title>
     <url>/2019/12/05/TCP%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/</url>
-    <content><![CDATA[<h3 id="可靠传输的要求："><a href="#可靠传输的要求：" class="headerlink" title="可靠传输的要求："></a>可靠传输的要求：</h3><pre><code>所谓的可靠传输，就是能保证数据的完整性，无差错、不丢失、不重复、并且按序到达</code></pre><h3 id="TCP可靠传输的机制原理"><a href="#TCP可靠传输的机制原理" class="headerlink" title="TCP可靠传输的机制原理"></a>TCP可靠传输的机制原理</h3><p>TCP首先采用三次握手建立连接、四次挥手来释放连接。</p>
-<a id="more"></a>
-
-
-
-
+    <content><![CDATA[<h3 id="可靠传输的要求："><a href="#可靠传输的要求：" class="headerlink" title="可靠传输的要求："></a>可靠传输的要求：</h3><pre><code>所谓的可靠传输，就是能保证数据的完整性，无差错、不丢失、不重复、并且按序到达</code></pre><a id="more"></a>
+<h3 id="TCP可靠传输的机制原理"><a href="#TCP可靠传输的机制原理" class="headerlink" title="TCP可靠传输的机制原理"></a>TCP可靠传输的机制原理</h3><p>TCP首先采用三次握手建立连接、四次挥手来释放连接。</p>
 <h4 id="三次握手过程："><a href="#三次握手过程：" class="headerlink" title="三次握手过程："></a>三次握手过程：</h4><p><img src="https://img-blog.csdnimg.cn/20191205092429572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="三次握手"></p>
 <h4 id="四次挥手过程："><a href="#四次挥手过程：" class="headerlink" title="四次挥手过程："></a>四次挥手过程：</h4>]]></content>
       <tags>
@@ -96,11 +118,13 @@
       </tags>
   </entry>
   <entry>
-    <title>队列</title>
+    <title>Queue</title>
     <url>/2019/12/02/%E9%98%9F%E5%88%97/</url>
-    <content><![CDATA[<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><pre><code>“先进先出，后进后出”</code></pre>]]></content>
+    <content><![CDATA[<p>数据结构 - 队列</p>
+<a id="more"></a>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><pre><code>“先进先出，后进后出”</code></pre>]]></content>
       <tags>
-        <tag>数据结构</tag>
+        <tag>DS</tag>
       </tags>
   </entry>
   <entry>
@@ -123,34 +147,21 @@
       </tags>
   </entry>
   <entry>
-    <title>政治历年题目</title>
-    <url>/2019/12/02/%E6%94%BF%E6%B2%BB%E5%8E%86%E5%B9%B4%E9%A2%98%E7%9B%AE/</url>
-    <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
-      <tags>
-        <tag>政治综合</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研高频单词</title>
-    <url>/2019/12/02/%E8%80%83%E7%A0%94%E9%AB%98%E9%A2%91%E5%8D%95%E8%AF%8D/</url>
-    <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>定积分</title>
+    <title>definite integration</title>
     <url>/2019/12/02/%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
-    <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
+    <content><![CDATA[<p>高等数学 - 定积分</p>
+<a id="more"></a>
+<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
       <tags>
-        <tag>高数(一)</tag>
+        <tag>higher mathematics</tag>
       </tags>
   </entry>
   <entry>
-    <title>jsp上机实验</title>
+    <title>JSP Computer experiments</title>
     <url>/2019/12/02/jsp%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<h3 id="大三上学期jsp实验"><a href="#大三上学期jsp实验" class="headerlink" title="大三上学期jsp实验"></a>大三上学期jsp实验</h3><h4 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h4><p>实验任务<br>1 编写JSP页面rect.jsp实现如下表单。输入数字显示长方形面积，输入非数字有提示。如下图所示。</p>
-<a id="more"></a>
+    <content><![CDATA[<h3 id="大三上学期jsp实验"><a href="#大三上学期jsp实验" class="headerlink" title="大三上学期jsp实验"></a>大三上学期jsp实验</h3><a id="more"></a>
+<h4 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h4><p>实验任务<br>1 编写JSP页面rect.jsp实现如下表单。输入数字显示长方形面积，输入非数字有提示。如下图所示。</p>
+<!-- more -->
 <p>2编写JSP页面实现如下用户登录页面。输入用户名”admin”密码”123”显示登录成功。否则显示用户名和密码不正确。没有输入用户名或者密码提示，不能为空。<br>提示：判断字符串s1和s2是否相等。 s1.equals(s2)==true</p>
 <p><img src="https://img-blog.csdnimg.cn/20191203220955722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="rect"><br><img src="https://img-blog.csdnimg.cn/20191205085834162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="login"></p>
 <p><code>答案1：</code></p>
@@ -186,66 +197,72 @@
         <category>front-end</category>
       </categories>
       <tags>
-        <tag>jsp上机实验</tag>
+        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
-    <title>五子棋</title>
+    <title>Five Chess</title>
     <url>/2019/11/30/%E4%BA%94%E5%AD%90%E6%A3%8B/</url>
-    <content><![CDATA[<p>大二下学期Java程序设计内容，<br>使用窗体简单实现五子棋小游戏<br><code>代码实现：</code></p>
+    <content><![CDATA[<p>窗口五子棋的实现</p>
 <a id="more"></a>
+<p>大二下学期Java程序设计内容，<br>使用窗体简单实现五子棋小游戏<br><code>代码实现：</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import java.awt.*;</span><br><span class="line">import java.awt.event.ActionEvent;</span><br><span class="line">import java.awt.event.ActionListener;</span><br><span class="line">import java.awt.event.MouseAdapter;</span><br><span class="line">import java.awt.event.MouseEvent;</span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">import javax.swing.*;</span><br><span class="line">class chess &#123;</span><br><span class="line">	public int X,Y;</span><br><span class="line">	public int flag;</span><br><span class="line">	public chess() &#123;</span><br><span class="line">		X=0;</span><br><span class="line">		Y=0;</span><br><span class="line">		flag=0;</span><br><span class="line">	&#125;</span><br><span class="line">	public chess(int x,int y) &#123;</span><br><span class="line">		X=x;</span><br><span class="line">		Y=y;</span><br><span class="line">		flag=0;</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class FiveChess extends JPanel &#123;</span><br><span class="line">	public Graphics g;</span><br><span class="line">	public chess [][]xy=new chess[15][15];</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		FiveChess fc=new FiveChess();</span><br><span class="line">		fc.go();</span><br><span class="line">	&#125;</span><br><span class="line">	public void go() &#123;</span><br><span class="line">		JFrame frame = new JFrame(&quot;五子棋&quot;);</span><br><span class="line">		frame.setLocation(200,150);</span><br><span class="line">		frame.setSize(800,530);</span><br><span class="line">		frame.setDefaultCloseOperation(3);</span><br><span class="line">		JMenuBar menubar=new JMenuBar();</span><br><span class="line">		JMenu menu1=new JMenu(&quot;开始&quot;);</span><br><span class="line">		JMenu menu2=new JMenu(&quot;帮助&quot;);</span><br><span class="line">		JMenuItem bstart=new JMenuItem(&quot;新游戏&quot;);</span><br><span class="line">		JMenuItem op=new JMenuItem(&quot;如何获胜&quot;);</span><br><span class="line">		menu1.add(bstart);</span><br><span class="line">		menu2.add(op);</span><br><span class="line">		menubar.add(menu1);</span><br><span class="line">		menubar.add(menu2);</span><br><span class="line">		frame.setJMenuBar(menubar);</span><br><span class="line">		</span><br><span class="line">		JTextArea text=new JTextArea();</span><br><span class="line">		text.setPreferredSize(new Dimension(200,100));</span><br><span class="line">		text.setEditable(false);</span><br><span class="line">		</span><br><span class="line">		JPanel panel1=new JPanel();</span><br><span class="line">		panel1.setPreferredSize(new Dimension(300,500));</span><br><span class="line">		panel1.setBackground(Color.white);</span><br><span class="line">		JButton bquit=new JButton(&quot;认输&quot;);</span><br><span class="line">		JButton bundo=new JButton(&quot;悔棋&quot;);</span><br><span class="line">		bquit.setPreferredSize(new Dimension(200,70));</span><br><span class="line">		bundo.setPreferredSize(new Dimension(200,70));</span><br><span class="line">		panel1.add(bquit);</span><br><span class="line">		panel1.add(bundo);</span><br><span class="line">		JRadioButton button1=new JRadioButton(&quot;人机对战&quot;);</span><br><span class="line">		JRadioButton button2=new JRadioButton(&quot;玩家对战&quot;);</span><br><span class="line">		button1.setOpaque(false);</span><br><span class="line">		button2.setOpaque(false);</span><br><span class="line">		button1.setPreferredSize(new Dimension(200,70));</span><br><span class="line">		button2.setPreferredSize(new Dimension(200,70));</span><br><span class="line">		ButtonGroup group=new ButtonGroup();</span><br><span class="line">		group.add(button1);</span><br><span class="line">		group.add(button2);</span><br><span class="line">		panel1.add(button1);</span><br><span class="line">		panel1.add(button2);</span><br><span class="line">		</span><br><span class="line">		panel1.add(text);</span><br><span class="line">		</span><br><span class="line">		this.setBackground(Color.orange);</span><br><span class="line">		frame.setLayout(new BorderLayout());</span><br><span class="line">		frame.add(this,BorderLayout.CENTER);</span><br><span class="line">		frame.add(panel1,BorderLayout.EAST);</span><br><span class="line">		frame.setVisible(true);</span><br><span class="line">		frame.setResizable(false);</span><br><span class="line">		g=this.getGraphics();</span><br><span class="line">		</span><br><span class="line">		setChess();</span><br><span class="line">		listener l=new listener();</span><br><span class="line">	    l.setG(g);</span><br><span class="line">	    l.setP(this);</span><br><span class="line">	    l.setChess(xy);</span><br><span class="line">	    l.setText(text);</span><br><span class="line">	    this.addMouseListener(l);</span><br><span class="line">	    bstart.addActionListener(l);</span><br><span class="line">	    bquit.addActionListener(l);</span><br><span class="line">	    op.addActionListener(l);</span><br><span class="line">	    bundo.addActionListener(l);</span><br><span class="line">	    button1.addActionListener(l);</span><br><span class="line">	    button2.addActionListener(l);</span><br><span class="line">	&#125;</span><br><span class="line">	public void setChess() &#123;</span><br><span class="line">		for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">            for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                chess ch=new chess((j+1)*30,(i+1)*30);</span><br><span class="line">                xy[i][j]=ch;</span><br><span class="line">            &#125;               </span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public void draw(Graphics ag) &#123;</span><br><span class="line">		Graphics2D g=(Graphics2D)ag;</span><br><span class="line">		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);</span><br><span class="line">		for(int i=0;i&lt;15;i++) &#123;</span><br><span class="line">			for(int j=0;j&lt;15;j++) &#123;</span><br><span class="line">				  g.setColor(Color.black);</span><br><span class="line">				  g.drawLine(30,30+i*30,450,30+i*30);</span><br><span class="line">	              g.drawLine(30+i*30,30,30+i*30,450);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		//System.out.println(&quot;黑方首下&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	public void paint(Graphics g) &#123;</span><br><span class="line">		super.paint(g);</span><br><span class="line">		draw(g);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class listener extends MouseAdapter implements ActionListener&#123;</span><br><span class="line">    int mode;</span><br><span class="line">    int x,y;                  </span><br><span class="line">    Graphics2D g;       </span><br><span class="line">    int chesscount;             //连成一条线的同一颜色棋子数量</span><br><span class="line">    chess [][]xy;       </span><br><span class="line">    int col=2; </span><br><span class="line">    chess chessnew=new chess(); </span><br><span class="line">    JPanel panel;</span><br><span class="line">    JTextArea text;</span><br><span class="line">    public void setText(JTextArea text) &#123;</span><br><span class="line">    	this.text=text;</span><br><span class="line">    &#125;</span><br><span class="line">     public void setG(Graphics g)&#123;</span><br><span class="line">            this.g=(Graphics2D)g;</span><br><span class="line">        &#125; </span><br><span class="line">    public void setP(JPanel panel)&#123;</span><br><span class="line">        this.panel=panel;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setChess(chess [][]xy)&#123;</span><br><span class="line">        this.xy=xy;</span><br><span class="line">    &#125;</span><br><span class="line">    public void actionPerformed(ActionEvent e) &#123;</span><br><span class="line">        String str= e.getActionCommand();</span><br><span class="line">        if(str.equals(&quot;如何获胜&quot;)) &#123;</span><br><span class="line">        	int b;</span><br><span class="line">        	String str1=&quot;&quot;;</span><br><span class="line">        	byte []tom=new byte[2];</span><br><span class="line">        	try &#123;</span><br><span class="line">        		FileInputStream in=new FileInputStream(&quot;帮助.txt&quot;);</span><br><span class="line">        		while((b=in.read(tom,0,2))!=-1) &#123;</span><br><span class="line">        			String s=new String(tom,0,b);</span><br><span class="line">        			str1+=s;</span><br><span class="line">        			//System.out.print(s);</span><br><span class="line">        		&#125;</span><br><span class="line">        		text.setText(str1);</span><br><span class="line">        		in.close();</span><br><span class="line">        	&#125;catch(IOException ee) &#123;</span><br><span class="line">        		text.setText(&quot;没找到帮助文档&quot;);//System.out.println(&quot;没找到帮助文档&quot;);</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(str.equals(&quot;新游戏&quot;)) &#123;</span><br><span class="line">        	for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">                for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                    xy[i][j].flag=0;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        	col=2;</span><br><span class="line">            panel.paint(g);</span><br><span class="line">        &#125;</span><br><span class="line">        if(str.equals(&quot;认输&quot;))&#123;</span><br><span class="line">            if(col==1)&#123;</span><br><span class="line">            JOptionPane.showMessageDialog(null, &quot;白棋认输,黑棋胜&quot;); </span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">            JOptionPane.showMessageDialog(null, &quot;黑棋认输,白棋胜&quot;);     </span><br><span class="line">            &#125;</span><br><span class="line">            for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">                for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                    xy[i][j].flag=0;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            panel.paint(g);</span><br><span class="line">        &#125;</span><br><span class="line">        if(str.equals(&quot;悔棋&quot;)) &#123;</span><br><span class="line">        	if(chessnew.flag==1) &#123;</span><br><span class="line">        		col=1;</span><br><span class="line">        		text.setText(&quot;白方悔棋，请白方在落一子&quot;);//System.out.println(&quot;白方悔棋，请白方在落一子&quot;);</span><br><span class="line">        	&#125;</span><br><span class="line">        	else &#123;</span><br><span class="line">        		col=2;</span><br><span class="line">        		text.setText(&quot;黑方悔棋，请黑方在落一子&quot;);//System.out.println(&quot;黑方悔棋，请黑方在落一子&quot;);</span><br><span class="line">        	&#125;</span><br><span class="line">        	chessnew.flag=0;</span><br><span class="line">        	panel.paint(g);</span><br><span class="line">        	for(int i=0;i&lt;15;i++) &#123;</span><br><span class="line">        		for(int j=0;j&lt;15;j++) &#123;</span><br><span class="line">        			if(xy[i][j].flag!=0) &#123;</span><br><span class="line">        				if(xy[i][j].flag==1) &#123;</span><br><span class="line">        					g.setColor(Color.white);</span><br><span class="line">        					g.fillOval(xy[i][j].X-10, xy[i][j].Y-10,20,20);</span><br><span class="line">        				&#125;</span><br><span class="line">        				else &#123;</span><br><span class="line">        					g.setColor(Color.black);</span><br><span class="line">        					g.fillOval(xy[i][j].X-10, xy[i][j].Y-10,20,20);	</span><br><span class="line">        				&#125;</span><br><span class="line">        			&#125;</span><br><span class="line">        		&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(str.equals(&quot;人人对战&quot;))&#123;</span><br><span class="line">            mode=11;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public void mouseClicked(MouseEvent e) &#123;</span><br><span class="line">        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);</span><br><span class="line">        x=e.getX();</span><br><span class="line">        y=e.getY();</span><br><span class="line">        for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">        	for(int j=0;j&lt;15;j++) &#123;</span><br><span class="line">               if(Math.abs(x-xy[i][j].X)&lt;10&amp;&amp;Math.abs(y-xy[i][j].Y)&lt;10) &#123;</span><br><span class="line">                    if(xy[i][j].flag==0) &#123;</span><br><span class="line">                        if(col == 1)&#123;  </span><br><span class="line">                        	g.setColor(Color.white);//椭圆的左上角xy坐标，椭圆的宽度、高度</span><br><span class="line">                            g.fillOval(xy[i][j].X-12, xy[i][j].Y-12,20,20);</span><br><span class="line">                            xy[i][j].flag=1;          </span><br><span class="line">                            chessnew=xy[i][j]; </span><br><span class="line">                            col=2;</span><br><span class="line">                            text.setText(&quot;该黑方下棋&quot;);//System.out.println(&quot;该黑方下棋&quot;);</span><br><span class="line">                        &#125;</span><br><span class="line">                        else if(col==2)&#123;</span><br><span class="line">                        	</span><br><span class="line">                        	g.setColor(Color.black);</span><br><span class="line">                            g.fillOval(xy[i][j].X-12, xy[i][j].Y-12,20,20);</span><br><span class="line">                            xy[i][j].flag=2;   </span><br><span class="line">                            col=1;</span><br><span class="line">                            text.setText(&quot;该白方下棋&quot;);//System.out.println(&quot;该白方下棋&quot;);</span><br><span class="line">                        &#125;</span><br><span class="line">                        checkChess( xy[i][j]);</span><br><span class="line">                     &#125;   </span><br><span class="line">                    else	 text.setText(&quot;这里不能落子&quot;);//System.out.println(&quot;这里不能落子&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">        		&#125;</span><br><span class="line">            &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    public void checkChess(chess ch)&#123;</span><br><span class="line">        int count1=1;</span><br><span class="line">        int	count2=1;</span><br><span class="line">        int count3=1;</span><br><span class="line">        int count4=1;</span><br><span class="line">        int x=ch.Y/30-1;</span><br><span class="line">        int y=ch.X/30-1;</span><br><span class="line">        for(int j=y+1;j&lt;15;j++)&#123;              </span><br><span class="line">            if(xy[x][y].flag==xy[x][j].flag)&#123; </span><br><span class="line">                count1++;</span><br><span class="line">        &#125;</span><br><span class="line">            else</span><br><span class="line">                break;                                          </span><br><span class="line">        &#125;</span><br><span class="line">        for(int j=y-1;j&gt;=0;j--)&#123;                         </span><br><span class="line">            if(xy[x][y].flag==xy[x][j].flag)&#123;</span><br><span class="line">                count1++;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(count1&gt;=5)&#123;                                  </span><br><span class="line">            if(xy[x][y].flag==1)</span><br><span class="line">            	JOptionPane.showMessageDialog(null, &quot;白棋胜出&quot;);  </span><br><span class="line">            else</span><br><span class="line">            	JOptionPane.showMessageDialog(null, &quot;黑棋胜出&quot;); </span><br><span class="line">            for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">                for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                    xy[i][j].flag=0;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            panel.paint(g);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=x-1;i&gt;=0;i--)&#123;              </span><br><span class="line">            if(xy[x][y].flag==xy[i][y].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">                count2++;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                break;</span><br><span class="line">        &#125;                                                       </span><br><span class="line">        for(int i=x+1;i&lt;15;i++)&#123;                                </span><br><span class="line">            if(xy[x][y].flag==xy[i][y].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">                count2++;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(count2&gt;=5)&#123;                                  </span><br><span class="line">            if(xy[x][y].flag==1)</span><br><span class="line">            	JOptionPane.showMessageDialog(null, &quot;白棋胜出&quot;); </span><br><span class="line">            else</span><br><span class="line">            	JOptionPane.showMessageDialog(null, &quot;黑棋胜出&quot;); </span><br><span class="line">            for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">                for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                    xy[i][j].flag=0;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            panel.paint(g);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=x-1,j=y+1;i&gt;=0&amp;&amp;j&lt;15;i--,j++)&#123;</span><br><span class="line">            if(xy[x][y].flag==xy[i][j].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">                count3++;</span><br><span class="line">            &#125;</span><br><span class="line">            else break;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=x+1,j=y-1;j&gt;=0&amp;&amp;i&lt;15;j--,i++)&#123;</span><br><span class="line">            if(xy[x][y].flag==xy[i][j].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">                count3++;</span><br><span class="line">            &#125;</span><br><span class="line">            else break;</span><br><span class="line">        &#125;</span><br><span class="line">       if(count3&gt;=5)&#123;</span><br><span class="line">            if(xy[x][y].flag==1)</span><br><span class="line">                JOptionPane.showMessageDialog(null, &quot;白棋胜出&quot;); </span><br><span class="line">            else</span><br><span class="line">                JOptionPane.showMessageDialog(null, &quot;黑棋胜出&quot;);</span><br><span class="line">            for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">                for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                    xy[i][j].flag=0;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            panel.paint(g);</span><br><span class="line">        &#125;</span><br><span class="line">       for(int i=x+1,j=y+1;i&lt;15&amp;&amp;j&lt;15;i++,j++)&#123; </span><br><span class="line">           if(xy[x][y].flag==xy[i][j].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">               count4++;</span><br><span class="line">           &#125;</span><br><span class="line">           else break;</span><br><span class="line">       &#125;</span><br><span class="line">       for(int i=x-1,j=y-1;j&gt;=0&amp;&amp;i&gt;=0;j--,i--)&#123;</span><br><span class="line">           if(xy[x][y].flag==xy[i][j].flag&amp;&amp;xy[x][y].flag!=0)&#123;</span><br><span class="line">               count4++;</span><br><span class="line">           &#125;</span><br><span class="line">           else break;</span><br><span class="line">       &#125;</span><br><span class="line">       if(count4&gt;=5)&#123;</span><br><span class="line">           if(xy[x][y].flag==1)</span><br><span class="line">               JOptionPane.showMessageDialog(null, &quot;白棋胜出&quot;); </span><br><span class="line">           else</span><br><span class="line">               JOptionPane.showMessageDialog(null, &quot;黑棋胜出&quot;);</span><br><span class="line">           for(int i=0;i&lt;15;i++)&#123;</span><br><span class="line">               for(int j=0;j&lt;15;j++)&#123;</span><br><span class="line">                   xy[i][j].flag=0;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           panel.paint(g);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>front-end</category>
       </categories>
       <tags>
-        <tag>五子棋</tag>
+        <tag>Five-Chess</tag>
       </tags>
   </entry>
   <entry>
-    <title>进程经典同步问题</title>
+    <title>Process classical synchronization problem</title>
     <url>/2019/11/28/%E8%BF%9B%E7%A8%8B%E7%BB%8F%E5%85%B8%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><a href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法" class="headerlink" title="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法"></a>哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</h3><h4 id="生产者消费者问题："><a href="#生产者消费者问题：" class="headerlink" title="生产者消费者问题："></a>生产者消费者问题：</h4><pre><code>①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。 </code></pre><a id="more"></a>
-<pre><code>②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。</code></pre><p>PV操作题目分析的步骤：</p>
-<pre><code>1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。
-
-2.整理思路。根据各进程的操作流程确定PV操作的大致顺序。
-
-3.设置信号量。设置需要的信号量，并根据题目条件确定信号量的初值。</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore mutex = 1;  //互斥信号量</span><br><span class="line">semaphore empty = n;  //同步信号量。空闲缓冲区的数量</span><br><span class="line">semaphore full = 0;   //同步信号量。产品的数量，非空缓冲区的数量</span><br><span class="line">producer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      生成一个产品;</span><br><span class="line">      P(empty); //消耗一个空闲缓冲区</span><br><span class="line">      P(mutex);</span><br><span class="line">      把产品放入缓冲区;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(full)   //增加一个产品</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">consumer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      P(full);   //消耗一个产品</span><br><span class="line">      P(mutex);</span><br><span class="line">      从缓冲区取出一个产品;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(empty);  //增加一个空闲缓冲区</span><br><span class="line">      使用产品;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>进程经典同步问题</p>
+<a id="more"></a>
+<h3 id="哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法"><a href="#哲学家进餐问题-生产者消费者问题-读者-写者问题-银行家算法" class="headerlink" title="哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法"></a>哲学家进餐问题 生产者消费者问题 读者-写者问题  银行家算法</h3><h4 id="生产者消费者问题："><a href="#生产者消费者问题：" class="headerlink" title="生产者消费者问题："></a>生产者消费者问题：</h4><p>①生产者—消费者之间的同步关系表现为：一旦缓冲池中所有缓冲区均装满产品时，生产者必须等待消费者提供空缓冲区；一旦缓冲池中所有缓冲区全为空时，消费者必须等待生产者提供满缓冲区。 </p>
+<p>②生产者—消费者之间还有互斥关系：由于缓冲池是临界资源，所以任何进程在对缓冲区进行存取操作时都必须和其他进程互斥进行。</p>
+<p>PV操作题目分析的步骤：</p>
+<p>1.关系分析。找出题目中描述的各个进程，分析它们之间的同步、互斥关系。</p>
+<p>2.整理思路。根据各进程的操作流程确定PV操作的大致顺序。</p>
+<p>3.设置信号量。设置需要的信号量，并根据题目条件确定信号量的初值。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore mutex = 1;  //互斥信号量</span><br><span class="line">semaphore empty = n;  //同步信号量。空闲缓冲区的数量</span><br><span class="line">semaphore full = 0;   //同步信号量。产品的数量，非空缓冲区的数量</span><br><span class="line">producer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      生成一个产品;</span><br><span class="line">      P(empty); //消耗一个空闲缓冲区</span><br><span class="line">      P(mutex);</span><br><span class="line">      把产品放入缓冲区;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(full)   //增加一个产品</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">consumer()&#123;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">      P(full);   //消耗一个产品</span><br><span class="line">      P(mutex);</span><br><span class="line">      从缓冲区取出一个产品;</span><br><span class="line">      V(mutex);</span><br><span class="line">      V(empty);  //增加一个空闲缓冲区</span><br><span class="line">      使用产品;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="哲学家进餐问题："><a href="#哲学家进餐问题：" class="headerlink" title="哲学家进餐问题："></a>哲学家进餐问题：</h4><p>问题描述：</p>
-<pre><code>5个哲学家围坐在一个圆桌上，每两个哲学家之间都有一只筷子，哲学家平时进行思考，只有当他们饥饿时，才拿起筷子吃饭。规定每个哲学家只能先取其左边筷子，然后取其右边筷子，然后才可以吃饭。</code></pre><p>分析：</p>
-<pre><code>每一只筷子都是一个临界资源，设置5个互斥信号量。Semaphore stcik[5]={1,1,1,1,1}因为：只有占有左边筷子-&gt;占有右边筷子-&gt;吃饭所以p(左边筷子)-&gt;p(右边筷子)-&gt;吃饭</code></pre><p>实现：</p>
+<p>5个哲学家围坐在一个圆桌上，每两个哲学家之间都有一只筷子，哲学家平时进行思考，只有当他们饥饿时，才拿起筷子吃饭。规定每个哲学家只能先取其左边筷子，然后取其右边筷子，然后才可以吃饭。</p>
+<p>分析：</p>
+<p>每一只筷子都是一个临界资源，设置5个互斥信号量。Semaphore stcik[5]={1,1,1,1,1}因为：只有占有左边筷子-&gt;占有右边筷子-&gt;吃饭所以p(左边筷子)-&gt;p(右边筷子)-&gt;吃饭</p>
+<p>实现：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">main()&#123;</span><br><span class="line">	philosopher(0);//注意不可以用循环，因为此中是4个并列的进程。</span><br><span class="line">	philosopher(1);</span><br><span class="line">	philosopher(2);</span><br><span class="line">	philosopher(3);</span><br><span class="line">	philosopher(4);</span><br><span class="line">&#125;</span><br><span class="line">philosopher(int i)&#123;</span><br><span class="line">	while(1)&#123;</span><br><span class="line">		思考；</span><br><span class="line">		p(stick[i]);//取左边筷子</span><br><span class="line">		p(stick[i+1]);//取右边筷子</span><br><span class="line"></span><br><span class="line">		进餐；</span><br><span class="line">		V(stick[i]);</span><br><span class="line">		v(stick[i+1]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>问题：</p>
-<pre><code>如果5个哲学家同时拿起自己左边的筷子，就会发生死锁。</code></pre><p>防止死锁的方法：</p>
-<pre><code>（1）方法一：
-
-    规定在拿到左侧的筷子后，先检查右面的筷子是否可用。如果不可用，则先放下左侧筷子， 等一段时间再重复整个过程。</code></pre><p>问题：发生饥饿现象；</p>
-<pre><code>如果同时拿起左边筷子，则右边的筷子都不可用，则放下，然后再次拿起......则谁都无法就餐
-
-（2）方法二：
-
-    最多允许四个哲学家同时进餐,以保证至少有一个哲学家能够进餐,最终总会释放出他所使用过的两支筷子,从而可使更多的哲学家进餐。</code></pre><p>伪码：</p>
+<p>如果5个哲学家同时拿起自己左边的筷子，就会发生死锁。</p>
+<p>防止死锁的方法：</p>
+<p>（1）方法一：</p>
+<p>规定在拿到左侧的筷子后，先检查右面的筷子是否可用。如果不可用，则先放下左侧筷子， 等一段时间再重复整个过程。</p>
+<p>问题：发生饥饿现象；</p>
+<p>如果同时拿起左边筷子，则右边的筷子都不可用，则放下，然后再次拿起……则谁都无法就餐</p>
+<p>（2）方法二：</p>
+<p>最多允许四个哲学家同时进餐,以保证至少有一个哲学家能够进餐,最终总会释放出他所使用过的两支筷子,从而可使更多的哲学家进餐。</p>
+<p>伪码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore chopstick[5]=&#123;1，1，1，1，1&#125;;</span><br><span class="line">semaphore room=4;</span><br><span class="line">void philosopher(int i)</span><br><span class="line">&#123;</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">		think();</span><br><span class="line">		wait(room); //请求进入房间进餐</span><br><span class="line">		wait(chopstick[i]); //请求左手边的筷子</span><br><span class="line">		wait(chopstick[(i+1)%5]); //请求右手边的筷子</span><br><span class="line">		eat();</span><br><span class="line">		signal(chopstick[(i+1)%5]); //释放右手边的筷子</span><br><span class="line">		signal(chopstick[i]); //释放左手边的筷子</span><br><span class="line">		signal(room); //退出房间释放信号量room</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <pre><code>（3）方法三：将拿左筷子，与拿右筷子当做一个原子操作：（即只有当左右筷子均可以拿到时，才拿筷子。
 
 （4）方法四：规定奇数号的哲学家先拿起他左边的筷子，然后再去拿他右边的筷子;而偶数号 的哲学家则相反。</code></pre><p>伪码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore chopstick[5]=&#123;1，1，1，1，1&#125;;</span><br><span class="line">void philosopher(int i)</span><br><span class="line">	&#123;</span><br><span class="line">		while(true)</span><br><span class="line">		&#123;</span><br><span class="line">			think();</span><br><span class="line">			if(i%2 == 0) //偶数哲学家，先右后左。</span><br><span class="line">				&#123;</span><br><span class="line">					P (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					P (chopstick[ i]) ;</span><br><span class="line">					eat();</span><br><span class="line">					V (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					V (chopstick[ i]) ;</span><br><span class="line">				&#125;</span><br><span class="line">			Else //奇数哲学家，先左后右。</span><br><span class="line">				&#123;</span><br><span class="line">					p (chopstick[ i]) ;</span><br><span class="line">					p (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					eat();</span><br><span class="line">					V (chopstick[ i]) ;</span><br><span class="line">					V (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="读者-写者问题"><a href="#读者-写者问题" class="headerlink" title="读者-写者问题"></a>读者-写者问题</h4><p>读者优先：</p>
-<pre><code>互斥信号量wrt，初值是1，代表一个共享文件，解决“读－写”互斥，“写－写”互斥。一个记数器，即整型变量readcount，记录读者数，初值是0。 来一个读者， readcount加1 当readcount ＝1表示是第一个读者， 则需要执行p操作抢占文件；否则表示已有读者在安全的读数据。 走一个读者，readcount减1 当readcount ＝0表示是最后一个读者，则需要v操作释放资源；否则表示还有读者在读数据。readcount 为多个读者共享的变量，是临界资源。用互斥信号量mutex控制, mutex初值是1。</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0; </span><br><span class="line">semaphore mutex=1, wrt=1 ; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">        wait (mutex);</span><br><span class="line">	readcount++;	</span><br><span class="line">	if (readcount == 1)</span><br><span class="line">	       wait(wrt);</span><br><span class="line">	signal (mutex);</span><br><span class="line">		…</span><br><span class="line">	   reading is performed</span><br><span class="line">		 …</span><br><span class="line">	wait (mutex);</span><br><span class="line">	readcount--;</span><br><span class="line">	if (readcount == 0)</span><br><span class="line">		signal (wrt);</span><br><span class="line">	signal (mutex);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">      wait(wrt);</span><br><span class="line">	    …</span><br><span class="line">         writing is performed</span><br><span class="line">	    …</span><br><span class="line">      signal(wrt);</span><br></pre></td></tr></table></figure>
+<p>互斥信号量wrt，初值是1，代表一个共享文件，解决“读－写”互斥，“写－写”互斥。一个记数器，即整型变量readcount，记录读者数，初值是0。 来一个读者， readcount加1 当readcount ＝1表示是第一个读者， 则需要执行p操作抢占文件；否则表示已有读者在安全的读数据。 走一个读者，readcount减1 当readcount ＝0表示是最后一个读者，则需要v操作释放资源；否则表示还有读者在读数据。readcount 为多个读者共享的变量，是临界资源。用互斥信号量mutex控制, mutex初值是1。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0; </span><br><span class="line">semaphore mutex=1, wrt=1 ; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">        wait (mutex);</span><br><span class="line">	readcount++;	</span><br><span class="line">	if (readcount == 1)</span><br><span class="line">	       wait(wrt);</span><br><span class="line">	signal (mutex);</span><br><span class="line">		…</span><br><span class="line">	   reading is performed</span><br><span class="line">		 …</span><br><span class="line">	wait (mutex);</span><br><span class="line">	readcount--;</span><br><span class="line">	if (readcount == 0)</span><br><span class="line">		signal (wrt);</span><br><span class="line">	signal (mutex);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">      wait(wrt);</span><br><span class="line">	    …</span><br><span class="line">         writing is performed</span><br><span class="line">	    …</span><br><span class="line">      signal(wrt);</span><br></pre></td></tr></table></figure>
 <p>写者优先:</p>
-<pre><code>在读者优先的基础上,增加信号量r，初值是1：当至少有一个写进程准备访问数据区时，用于禁止所有的读进程。增加一个记数器，即整型变量writecount，记录写者数，初值是0。 writecount为多个写者共享的变量，是临界资源。用互斥信号量mutex2控制, mutex2初值是1。增加mutex3，初值是1：在r上不允许建造长队列，否则写进程将不能跳过这个队列，因此，只允许一个读进程在r上排队，而所有其他读进程在等待r之前，在信号量mutex3上排队。</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0, writecount=0; </span><br><span class="line">semaphore mutex1=1, mutex2=1, mutex3=1, w=1, r=1 ; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">P(mutex 3);</span><br><span class="line">   P(r);</span><br><span class="line">      P(mutex 1);</span><br><span class="line">         readcount++;</span><br><span class="line">         if (readcount == 1 ) </span><br><span class="line">            P(w);</span><br><span class="line">      V(mutex 1);</span><br><span class="line">    V(r);</span><br><span class="line">V(mutex 3);</span><br><span class="line">      reading is performed</span><br><span class="line">P(mutex 1);</span><br><span class="line">    readcount --;</span><br><span class="line">    if (readcount == 0 )</span><br><span class="line">             V(w);</span><br><span class="line">V(mutex 1);</span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">P(mutex 2);</span><br><span class="line">    writecount++;</span><br><span class="line">    if (writecount == 1 )</span><br><span class="line">           P(r);</span><br><span class="line">V(mutex 2);</span><br><span class="line">P(w);</span><br><span class="line">    writing is performed</span><br><span class="line">V(w);</span><br><span class="line">P(mutex 2);</span><br><span class="line">    writecount --;</span><br><span class="line">    if (writecount == 0)</span><br><span class="line">           V(r);</span><br><span class="line"></span><br><span class="line">V(mutex 2);</span><br></pre></td></tr></table></figure>
+<p>在读者优先的基础上,增加信号量r，初值是1：当至少有一个写进程准备访问数据区时，用于禁止所有的读进程。增加一个记数器，即整型变量writecount，记录写者数，初值是0。 writecount为多个写者共享的变量，是临界资源。用互斥信号量mutex2控制, mutex2初值是1。增加mutex3，初值是1：在r上不允许建造长队列，否则写进程将不能跳过这个队列，因此，只允许一个读进程在r上排队，而所有其他读进程在等待r之前，在信号量mutex3上排队。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0, writecount=0; </span><br><span class="line">semaphore mutex1=1, mutex2=1, mutex3=1, w=1, r=1 ; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">P(mutex 3);</span><br><span class="line">   P(r);</span><br><span class="line">      P(mutex 1);</span><br><span class="line">         readcount++;</span><br><span class="line">         if (readcount == 1 ) </span><br><span class="line">            P(w);</span><br><span class="line">      V(mutex 1);</span><br><span class="line">    V(r);</span><br><span class="line">V(mutex 3);</span><br><span class="line">      reading is performed</span><br><span class="line">P(mutex 1);</span><br><span class="line">    readcount --;</span><br><span class="line">    if (readcount == 0 )</span><br><span class="line">             V(w);</span><br><span class="line">V(mutex 1);</span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">P(mutex 2);</span><br><span class="line">    writecount++;</span><br><span class="line">    if (writecount == 1 )</span><br><span class="line">           P(r);</span><br><span class="line">V(mutex 2);</span><br><span class="line">P(w);</span><br><span class="line">    writing is performed</span><br><span class="line">V(w);</span><br><span class="line">P(mutex 2);</span><br><span class="line">    writecount --;</span><br><span class="line">    if (writecount == 0)</span><br><span class="line">           V(r);</span><br><span class="line"></span><br><span class="line">V(mutex 2);</span><br></pre></td></tr></table></figure>
 <p>读写公平:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int readcount=0; </span><br><span class="line">semaphore mutex=1, rw=1 w=1; </span><br><span class="line"> </span><br><span class="line">读者进程：</span><br><span class="line">        wait (w);</span><br><span class="line">        wait (mutex);</span><br><span class="line">        if (readcount == 0)</span><br><span class="line">	       wait(rw);</span><br><span class="line">    	readcount++;	</span><br><span class="line">    	signal (mutex);</span><br><span class="line">        signal (w);</span><br><span class="line">		…</span><br><span class="line">    	   reading is performed</span><br><span class="line">		 …</span><br><span class="line">    	wait (mutex);</span><br><span class="line">    	readcount--;</span><br><span class="line">    	if (readcount == 0)</span><br><span class="line">    		signal (rw);</span><br><span class="line">    	signal (mutex);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">写者进程：     </span><br><span class="line">    wait(w);</span><br><span class="line">    wait(rw);</span><br><span class="line">	    …</span><br><span class="line">         writing is performed</span><br><span class="line">	    …</span><br><span class="line">    signal(rw);</span><br><span class="line">    signal(w);</span><br></pre></td></tr></table></figure>
-<h4 id="银行家算法："><a href="#银行家算法：" class="headerlink" title="银行家算法："></a>银行家算法：</h4><pre><code>参照该博客学的：
-https://blog.csdn.net/qq_40693171/
-article/details/84780224</code></pre>]]></content>
+<h4 id="银行家算法："><a href="#银行家算法：" class="headerlink" title="银行家算法："></a>银行家算法：</h4><p>参照该博客学的：<br><a href="https://blog.csdn.net/qq_40693171/" target="_blank" rel="noopener">https://blog.csdn.net/qq_40693171/</a><br>article/details/84780224</p>
+]]></content>
       <tags>
-        <tag>操作系统</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
-    <title>Spring介绍</title>
+    <title>Spring introduce</title>
     <url>/2019/11/27/%E6%98%A5%E5%A4%A9spring/</url>
     <content><![CDATA[<p>Spring框架是由于软件开发的复杂性而创建的。</p>
 <p>Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅仅限于服务器端的开发。从简单性、可测试性和松耦合性角度而言，绝大部分Java应用都可以从Spring中受益。</p>
@@ -259,7 +276,7 @@ article/details/84780224</code></pre>]]></content>
         <category>back-end</category>
       </categories>
       <tags>
-        <tag>SSM框架</tag>
+        <tag>SSM-framework</tag>
       </tags>
   </entry>
 </search>
