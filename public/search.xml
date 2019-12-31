@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Segmented storage management</title>
+    <url>/2019/12/31/%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<p>分段存储管理方式</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Paging storage management</title>
+    <url>/2019/12/31/%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<p>分页存储管理方式</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Continuously allocated storage management</title>
+    <url>/2019/12/31/%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<p>连续分配存储管理方式</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java vector</title>
     <url>/2019/12/08/Java-vector%E7%B1%BB/</url>
     <content><![CDATA[<p>Java vector 类详解</p>
@@ -15,20 +42,26 @@
 <p>参数capacityIncrement给定了每次扩充的扩充值。当capacityIncrement为0的时候，则每一次扩充一倍，利用这个功能可以<br>优化存储。</p>
 <p>Vector 的<code>方法</code>：</p>
 <h5 id="插入功能"><a href="#插入功能" class="headerlink" title="插入功能"></a>插入功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final synchronized void adddElement(Object obj) </span><br><span class="line">插入的应是对象而不是数值，所以插入数值时要注意将数组转换成相应的对象</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void setElementAt(Object obj,int index) </span><br><span class="line">将index处的对象设置成obj，原来的对象将被覆盖</span><br><span class="line"></span><br><span class="line">(3)public final synchronized void insertElementAt(Object obj,int index) </span><br><span class="line">在index指定的位置插入obj，原来对象以及此后的对象依次往后顺延</span><br></pre></td></tr></table></figure>
-<h5 id="删除功能"><a href="#删除功能" class="headerlink" title="删除功能"></a>删除功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final synchronized void removeElement(Object obj)</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void removeAllElement()</span><br><span class="line"></span><br><span class="line">(3)public fianl synchronized void removeElementAt(int index)</span><br></pre></td></tr></table></figure>
-<h5 id="查询搜索功能"><a href="#查询搜索功能" class="headerlink" title="查询搜索功能"></a>查询搜索功能</h5><h5 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h5>]]></content>
+<h5 id="删除功能"><a href="#删除功能" class="headerlink" title="删除功能"></a>删除功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final synchronized void removeElement(Object obj)</span><br><span class="line">从向量中删除obj,若有多个存在，则从向量头开始试，删除找到的第一个与obj相同的向量成员。</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void removeAllElement()</span><br><span class="line">删除向量所有的对象 </span><br><span class="line"></span><br><span class="line">(3)public fianl synchronized void removeElementAt(int index) </span><br><span class="line">删除index所指的地方的对象</span><br></pre></td></tr></table></figure>
+<h5 id="查询搜索功能"><a href="#查询搜索功能" class="headerlink" title="查询搜索功能"></a>查询搜索功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final int indexOf(Object obj) </span><br><span class="line">从向量头开始搜索obj,返回所遇到的第一个obj对应的下标，若不存在此obj,返回-1. </span><br><span class="line"></span><br><span class="line">(2)public final synchronized int indexOf(Object obj,int index) </span><br><span class="line">从index所表示的下标处开始搜索obj. </span><br><span class="line"></span><br><span class="line">(3)public final int lastindexOf(Object obj) </span><br><span class="line">从向量尾部开始逆向搜索obj. </span><br><span class="line"></span><br><span class="line">(4)public final synchornized int lastIndex(Object obj,int index) </span><br><span class="line">从index所表示的下标处由尾至头逆向搜索obj. </span><br><span class="line"></span><br><span class="line">(5)public final synchornized firstElement() </span><br><span class="line">获取向量对象中的首个obj </span><br><span class="line"></span><br><span class="line">(6)public final synchornized Object lastElement() </span><br><span class="line">获取向量对象的最后一个obj</span><br></pre></td></tr></table></figure>
+<h5 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)public final int size(); </span><br><span class="line">   此方法用于获取向量元素的个数。它们返回值是向量中实际存在的元素个数，而非向量容量。可以调用方法capacity()来获取容量值。</span><br><span class="line"></span><br><span class="line">(2)public final synchronized void setSize(int newsize); </span><br><span class="line">   此方法用来定义向量的大小，若向量对象现有成员个数已经超过了newsize的值，则超过部分的多余元素会丢失。 </span><br><span class="line"></span><br><span class="line">程序中定义Enumeration类的一个对象Enumeration是java.util中的一个接口类， </span><br><span class="line"></span><br><span class="line">(3) public final synchronized Enumeration elements(); </span><br><span class="line">   此方法将向量对象对应到一个枚举类型。java.util包中的其他类中也都有这类方法，以便于用户获取对应的枚举类型。</span><br><span class="line">   在Enumeration中封装了有关枚举数据集合的方法。 </span><br><span class="line">   方法 hasMoreElement() 来判断集合中是否还有其他元素。方法 nextElement() 来获取下一个元素</span><br></pre></td></tr></table></figure>
+<p>以下代码就是用hasMoreElement（）和 nextElement（）遍历Vector</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">import java.util.Enumeration;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Vector;</span><br><span class="line"></span><br><span class="line">public class TestVector &#123;</span><br><span class="line">    public void test01() &#123;</span><br><span class="line">        Vector&lt;String&gt; hs = new Vector&lt;String&gt;();</span><br><span class="line">        hs.add(&quot;aa&quot;);</span><br><span class="line">        hs.add(&quot;bb&quot;);</span><br><span class="line">        hs.add(&quot;aa&quot;);</span><br><span class="line">        hs.add(&quot;cc&quot;);</span><br><span class="line">        hs.add(&quot;aa&quot;);</span><br><span class="line">        hs.add(&quot;dd&quot;);</span><br><span class="line">        printSet2(hs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void printSet(List hs) &#123;</span><br><span class="line">        Iterator iterator = hs.iterator();</span><br><span class="line">        while (iterator.hasNext()) &#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void printSet2(Vector&lt;String&gt; hs) &#123;</span><br><span class="line">        Enumeration&lt;String&gt; elements = hs.elements();</span><br><span class="line">        while (elements.hasMoreElements()) &#123;</span><br><span class="line">            System.out.println(elements.nextElement());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        new TestVector().test01();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191228093556109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="result"></p>
+]]></content>
       <tags>
         <tag>Java Class</tag>
       </tags>
   </entry>
   <entry>
-    <title>simple python grammer</title>
+    <title>Simple python grammer</title>
     <url>/2019/12/06/python%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p>Python 简单语法</p>
 <a id="more"></a>
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4>]]></content>
       <tags>
-        <tag>python</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -36,23 +69,44 @@
     <url>/2019/12/06/JVM%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<p>JVM(Java 虚拟机)的简单介绍</p>
 <a id="more"></a>
+<p>JVM是Java Virtual Machine(Java 虚拟机)的缩写，JVM是一种计算设备的规范，他是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。<br>引入Java语言虚拟机后，Java语言在不同平台上运行时不需要重新编译。Java语言使用Java虚拟机屏蔽了与具体平台相关的信息，使得Java语言编译程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。</p>
+<h4 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h4><p>Java虚拟机有自己完善的硬件结构（如:处理器，堆栈，相应的指令系统so on.）</p>
+<p>Java语言的可移植性：任何平台装有JVM，字节码文件(.class)就能够执行。“一次编译，多次执行”</p>
+<h4 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h4><p>Java虚拟机共有五个模块组成：<br>类装载器子系统、运行时数据区、执行引擎、本地方法接口和垃圾收集模块<br>Java虚拟机不是真正的物理机，他没有寄存器，所以指令集是使用Java栈来存储中间数据，这样做的目的就是为了保持Java虚拟机的指令集尽量的紧凑，同时也便于JAVA虚拟机在那些只有很少通用寄存器的平台上实现。</p>
+<h4 id="必要性"><a href="#必要性" class="headerlink" title="必要性"></a>必要性</h4><p>Java语言的一个最重要的一个特点是与平台的无关性。</p>
+<h4 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h4><p>（1）对于Java运行时涉及到的存储区域主要包括程序计数器、Java虚拟机栈、本地方法栈、java堆、方法区以及直接内存等等。对于每个部分，都有其使用的条件。程序计数器主要是取下一条指令，在Java里面主要是取下一条指令的字节码文件；Java虚拟机栈主要是利用栈先进后出的特性存储局部变量表，动态链接等，主要包括堆内存和栈内存，对于程序员内存分析而言是特别重要的。本地方法栈与上边的栈基本作用差不多，只不过这里是为Java方法而服务。Java堆是内存管理中最大的一块，所有的线程共享这一块内容，同时该部分也是垃圾收集器的主要区域。</p>
+<p>（2）虚拟机的垃圾回收机制是完善的，动态内存分配和回收是比较成熟的，在内存管理机制中，大部分都不需要我们考虑内存回收，只有Java堆和方法区需要我们考虑处理内存问题。一般的对于内存回收首先就是判断某一个部分是生存还是死亡，主要是通过下面二种算法：</p>
+<ul>
+<li><p>其一是引用计数算法，本算法实现简单，判定的效率也是比较高的，很多的软件都使用了该算法，但是主流的Java并没有选择该算法，核心的问题是该算法难以处理对象之间相互调用的问题。</p>
+</li>
+<li><p>其二是称可达性分析算法，该算法核心思想是依靠判断对象是否存活来实现的，本算法是通过一系列的GC ROOTS的对象作为起始点，采用搜索的算法遍历引用链，如果搜索过程中没有发现该节点，则认为该节点是不可达的，即可回收的，在Java里面，一般可以使用该算法处理问题。</p>
+</li>
+</ul>
+<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
+<li>移植性</li>
+<li>成熟</li>
+<li>覆盖面</li>
+</ul>
+<h4 id="碎片回收"><a href="#碎片回收" class="headerlink" title="碎片回收"></a>碎片回收</h4><p>Java类的实例所需的存储空间是在堆上分配的。解释器具体承担为类实例分配空间的工作。解释器在为一个实例分配完存储空间后，便开始记录对该实例所占用的内存区域的使用。一旦对象使用完毕，便将其回收到堆中。在Java语言中，除了new语句外没有其他方法为一对象申请和释放内存。对内存进行释放和回收的工作是由Java运行系统承担的。这允许Java运行系统的设计者自己决定碎片回收的方法。在SUN公司开发的Java解释器和Hot Java环境中，碎片回收用后台线程的方式来执行。</p>
 ]]></content>
       <tags>
         <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
-    <title>socket套接字</title>
+    <title>Socket introduce</title>
     <url>/2019/12/06/socket%E5%A5%97%E6%8E%A5%E5%AD%97/</url>
     <content><![CDATA[]]></content>
       <tags>
-        <tag>socket</tag>
+        <tag>Socket</tag>
       </tags>
   </entry>
   <entry>
-    <title>计算机网络体系结构</title>
+    <title>Computer network architecture</title>
     <url>/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>网络协议：</p>
+    <content><![CDATA[<p>计算机网络体系结构</p>
+<a id="more"></a>
+<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>网络协议：</p>
 <p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议。</p>
 <p>划分层次：</p>
 <p>1.语法：即数据与控制信息的结构或格式</p>
@@ -60,21 +114,21 @@
 <p>3.同步：即事件实现顺序的详细说明</p>
 ]]></content>
       <tags>
-        <tag>计算机网络体系结构</tag>
+        <tag>Computer Network</tag>
       </tags>
   </entry>
   <entry>
-    <title>maven project introduce</title>
+    <title>Maven project introduce</title>
     <url>/2019/12/06/maven%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<p>Maven项目介绍</p>
 <a id="more"></a>
 ]]></content>
       <tags>
-        <tag>maven</tag>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
-    <title>mybatis</title>
+    <title>Mybatis</title>
     <url>/2019/12/06/mybatis/</url>
     <content><![CDATA[<p>Mybatis 框架的简单学习</p>
 <h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
@@ -82,7 +136,7 @@
         <category>back-end</category>
       </categories>
       <tags>
-        <tag>SSM framewwork</tag>
+        <tag>SSM Framewwork</tag>
       </tags>
   </entry>
   <entry>
@@ -107,14 +161,15 @@
       </tags>
   </entry>
   <entry>
-    <title>TCP的可靠传输</title>
+    <title>Tcp reliable transmission</title>
     <url>/2019/12/05/TCP%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/</url>
-    <content><![CDATA[<h3 id="可靠传输的要求："><a href="#可靠传输的要求：" class="headerlink" title="可靠传输的要求："></a>可靠传输的要求：</h3><pre><code>所谓的可靠传输，就是能保证数据的完整性，无差错、不丢失、不重复、并且按序到达</code></pre><a id="more"></a>
-<h3 id="TCP可靠传输的机制原理"><a href="#TCP可靠传输的机制原理" class="headerlink" title="TCP可靠传输的机制原理"></a>TCP可靠传输的机制原理</h3><p>TCP首先采用三次握手建立连接、四次挥手来释放连接。</p>
+    <content><![CDATA[<p>Tcp可靠传输</p>
+<a id="more"></a>
+<h3 id="可靠传输的要求："><a href="#可靠传输的要求：" class="headerlink" title="可靠传输的要求："></a>可靠传输的要求：</h3><pre><code>所谓的可靠传输，就是能保证数据的完整性，无差错、不丢失、不重复、并且按序到达</code></pre><h3 id="TCP可靠传输的机制原理"><a href="#TCP可靠传输的机制原理" class="headerlink" title="TCP可靠传输的机制原理"></a>TCP可靠传输的机制原理</h3><p>TCP首先采用三次握手建立连接、四次挥手来释放连接。</p>
 <h4 id="三次握手过程："><a href="#三次握手过程：" class="headerlink" title="三次握手过程："></a>三次握手过程：</h4><p><img src="https://img-blog.csdnimg.cn/20191205092429572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="三次握手"></p>
 <h4 id="四次挥手过程："><a href="#四次挥手过程：" class="headerlink" title="四次挥手过程："></a>四次挥手过程：</h4>]]></content>
       <tags>
-        <tag>计算机网络</tag>
+        <tag>Computer Network</tag>
       </tags>
   </entry>
   <entry>
@@ -128,11 +183,11 @@
       </tags>
   </entry>
   <entry>
-    <title>冯诺依曼体系结构</title>
+    <title>Von neumann architecture</title>
     <url>/2019/12/02/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>(1)采用存储程序方式，指令和数据不加区别混合存储在同一个存储器中，数据和程序在内存中是没有区别的,它们都是内存中的数据,当EIP指针指向哪 CPU就加载那段内存中的数据,如果是不正确的指令格式,CPU就会发生错误中断. 在现在CPU的保护模式中,每个内存段都有其描述符,这个描述符记录着这个内存段的访问权限(可读,可写,可执行).这就变相的指定了哪些内存中存储的是指令哪些是数据）指令和数据都可以送到运算器进行运算，即由指令组成的程序是可以修改的。</p>
+    <content><![CDATA[<p>冯诺依曼体系结构</p>
 <a id="more"></a>
-
+<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>(1)采用存储程序方式，指令和数据不加区别混合存储在同一个存储器中，数据和程序在内存中是没有区别的,它们都是内存中的数据,当EIP指针指向哪 CPU就加载那段内存中的数据,如果是不正确的指令格式,CPU就会发生错误中断. 在现在CPU的保护模式中,每个内存段都有其描述符,这个描述符记录着这个内存段的访问权限(可读,可写,可执行).这就变相的指定了哪些内存中存储的是指令哪些是数据）指令和数据都可以送到运算器进行运算，即由指令组成的程序是可以修改的。</p>
 <p>(2)存储器是按地址访问的线性编址的一维结构，每个单元的位数是固定的。</p>
 <p>(3)指令由操作码和地址组成。操作码指明本指令的操作类型,地址码指明操作数和地址。操作数本身无数据类型的标志，它的数据类型由操作码确定。</p>
 <p>(4)通过执行指令直接发出控制信号控制计算机的操作。指令在存储器中按其执行顺序存放，由指令计数器指明要执行的指令所在的单元地址。指令计数器只有一个，一般按顺序递增，但执行顺序可按运算结果或当时的外界条件而改变。</p>
@@ -143,7 +198,7 @@
 <p>(3)计算机硬件由运算器、控制器、存储器、输入设备和输出设备五大部分组成。</p>
 ]]></content>
       <tags>
-        <tag>计算机组成原理</tag>
+        <tag>Principles Of Computer Composition</tag>
       </tags>
   </entry>
   <entry>
@@ -153,13 +208,14 @@
 <a id="more"></a>
 <h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
       <tags>
-        <tag>higher mathematics</tag>
+        <tag>Higher Mathematics</tag>
       </tags>
   </entry>
   <entry>
     <title>JSP Computer experiments</title>
     <url>/2019/12/02/jsp%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<h3 id="大三上学期jsp实验"><a href="#大三上学期jsp实验" class="headerlink" title="大三上学期jsp实验"></a>大三上学期jsp实验</h3><a id="more"></a>
+    <content><![CDATA[<p>大三上学期jsp实验</p>
+<a id="more"></a>
 <h4 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h4><p>实验任务<br>1 编写JSP页面rect.jsp实现如下表单。输入数字显示长方形面积，输入非数字有提示。如下图所示。</p>
 <!-- more -->
 <p>2编写JSP页面实现如下用户登录页面。输入用户名”admin”密码”123”显示登录成功。否则显示用户名和密码不正确。没有输入用户名或者密码提示，不能为空。<br>提示：判断字符串s1和s2是否相等。 s1.equals(s2)==true</p>
@@ -201,7 +257,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Five Chess</title>
+    <title>Five chess</title>
     <url>/2019/11/30/%E4%BA%94%E5%AD%90%E6%A3%8B/</url>
     <content><![CDATA[<p>窗口五子棋的实现</p>
 <a id="more"></a>
@@ -211,7 +267,7 @@
         <category>front-end</category>
       </categories>
       <tags>
-        <tag>Five-Chess</tag>
+        <tag>Five Chess</tag>
       </tags>
   </entry>
   <entry>
@@ -243,9 +299,9 @@
 <p>最多允许四个哲学家同时进餐,以保证至少有一个哲学家能够进餐,最终总会释放出他所使用过的两支筷子,从而可使更多的哲学家进餐。</p>
 <p>伪码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore chopstick[5]=&#123;1，1，1，1，1&#125;;</span><br><span class="line">semaphore room=4;</span><br><span class="line">void philosopher(int i)</span><br><span class="line">&#123;</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">		think();</span><br><span class="line">		wait(room); //请求进入房间进餐</span><br><span class="line">		wait(chopstick[i]); //请求左手边的筷子</span><br><span class="line">		wait(chopstick[(i+1)%5]); //请求右手边的筷子</span><br><span class="line">		eat();</span><br><span class="line">		signal(chopstick[(i+1)%5]); //释放右手边的筷子</span><br><span class="line">		signal(chopstick[i]); //释放左手边的筷子</span><br><span class="line">		signal(room); //退出房间释放信号量room</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>（3）方法三：将拿左筷子，与拿右筷子当做一个原子操作：（即只有当左右筷子均可以拿到时，才拿筷子。
-
-（4）方法四：规定奇数号的哲学家先拿起他左边的筷子，然后再去拿他右边的筷子;而偶数号 的哲学家则相反。</code></pre><p>伪码：</p>
+<p>（3）方法三：将拿左筷子，与拿右筷子当做一个原子操作：（即只有当左右筷子均可以拿到时，才拿筷子。</p>
+<p>（4）方法四：规定奇数号的哲学家先拿起他左边的筷子，然后再去拿他右边的筷子;而偶数号 的哲学家则相反。</p>
+<p>伪码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">semaphore chopstick[5]=&#123;1，1，1，1，1&#125;;</span><br><span class="line">void philosopher(int i)</span><br><span class="line">	&#123;</span><br><span class="line">		while(true)</span><br><span class="line">		&#123;</span><br><span class="line">			think();</span><br><span class="line">			if(i%2 == 0) //偶数哲学家，先右后左。</span><br><span class="line">				&#123;</span><br><span class="line">					P (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					P (chopstick[ i]) ;</span><br><span class="line">					eat();</span><br><span class="line">					V (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					V (chopstick[ i]) ;</span><br><span class="line">				&#125;</span><br><span class="line">			Else //奇数哲学家，先左后右。</span><br><span class="line">				&#123;</span><br><span class="line">					p (chopstick[ i]) ;</span><br><span class="line">					p (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">					eat();</span><br><span class="line">					V (chopstick[ i]) ;</span><br><span class="line">					V (chopstick[ i + 1 ] mod 5) ;</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="读者-写者问题"><a href="#读者-写者问题" class="headerlink" title="读者-写者问题"></a>读者-写者问题</h4><p>读者优先：</p>
 <p>互斥信号量wrt，初值是1，代表一个共享文件，解决“读－写”互斥，“写－写”互斥。一个记数器，即整型变量readcount，记录读者数，初值是0。 来一个读者， readcount加1 当readcount ＝1表示是第一个读者， 则需要执行p操作抢占文件；否则表示已有读者在安全的读数据。 走一个读者，readcount减1 当readcount ＝0表示是最后一个读者，则需要v操作释放资源；否则表示还有读者在读数据。readcount 为多个读者共享的变量，是临界资源。用互斥信号量mutex控制, mutex初值是1。</p>
@@ -264,9 +320,10 @@
   <entry>
     <title>Spring introduce</title>
     <url>/2019/11/27/%E6%98%A5%E5%A4%A9spring/</url>
-    <content><![CDATA[<p>Spring框架是由于软件开发的复杂性而创建的。</p>
-<p>Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅仅限于服务器端的开发。从简单性、可测试性和松耦合性角度而言，绝大部分Java应用都可以从Spring中受益。</p>
+    <content><![CDATA[<p>Spring 简单介绍</p>
 <a id="more"></a>
+<p>Spring框架是由于软件开发的复杂性而创建的。</p>
+<p>Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅仅限于服务器端的开发。从简单性、可测试性和松耦合性角度而言，绝大部分Java应用都可以从Spring中受益。</p>
 <p>◆·目的·：解决企业应用开发的复杂性</p>
 <p>◆·功能·：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能</p>
 <p>◆·范围·：任何Java应用</p>
