@@ -270,7 +270,9 @@
   <entry>
     <title>Socket introduce</title>
     <url>/2019/12/06/socket%E5%A5%97%E6%8E%A5%E5%AD%97/</url>
-    <content><![CDATA[<h4 id="网络中进程之间如何通信？"><a href="#网络中进程之间如何通信？" class="headerlink" title="网络中进程之间如何通信？"></a>网络中进程之间如何通信？</h4><p>本地进程间的通信(IPC)有很多方式</p>
+    <content><![CDATA[<p>网络通信Socket套接字简单了解</p>
+<a id="more"></a>
+<h4 id="网络中进程之间如何通信？"><a href="#网络中进程之间如何通信？" class="headerlink" title="网络中进程之间如何通信？"></a>网络中进程之间如何通信？</h4><p>本地进程间的通信(IPC)有很多方式</p>
 <ul>
 <li>消息传递(管道、FIFO、消息队列)</li>
 <li>同步(互斥量、条件变量、读写锁、文件和写记录锁、信号量)</li>
