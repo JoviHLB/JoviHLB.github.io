@@ -1,6 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java learning paths</title>
+    <url>/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
+    <content><![CDATA[<p>写给自己的Java程序员学习路线，希望自己能够坚持下去</p>
+<a id="more"></a>
+
+<h4 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h4><h5 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h5><p>1.简单的数据结构</p>
+<ul>
+<li>基础概念</li>
+<li>数组</li>
+<li>链表</li>
+<li>队列</li>
+<li>栈</li>
+</ul>
+<p>2.树</p>
+<ul>
+<li>二叉树</li>
+<li>平衡二叉树</li>
+<li>最优二叉树（哈夫曼树）</li>
+<li>红黑树 </li>
+<li>B、B+、B*树</li>
+<li>LSM树</li>
+</ul>
+<p>3.图</p>
+<ul>
+<li>图的基础知识和两种遍历方式</li>
+<li>最小生成树(Prim算法和Kruskal算法)</li>
+<li>最短路径算法(Dijkstra(迪杰斯特拉)算法和Floyd(弗洛伊德)算法)</li>
+<li>拓扑排序</li>
+</ul>
+<p>4.排序算法(8种排序算法和时间空间复杂度)</p>
+<p>5.java中排序工具</p>
+<ul>
+<li>数组排序</li>
+<li>集合工具类排序</li>
+</ul>
+<p>6.常见算法</p>
+<ul>
+<li>字符串比较KMP算法</li>
+<li>剪枝算法</li>
+<li>布隆过滤器</li>
+<li>回溯算法</li>
+<li>动态规划</li>
+<li>贪心</li>
+</ul>
+<h5 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h5><p>1、java集合</p>
+<ul>
+<li>各个java集合类 </li>
+<li>使用场景以及性能分析</li>
+</ul>
+<p>2、常用类</p>
+<ul>
+<li>基础类型封装类</li>
+<li>BeanUtil工具类</li>
+<li>string系列类</li>
+<li>java各种关键字（transient、final、static等等）</li>
+<li>Math系列</li>
+<li>system系列</li>
+</ul>
+<p>3、javaIO</p>
+<p>4、java泛型</p>
+<p>5、多态以及实现原理（主要是内存上的结构）</p>
+<p>6、java注解和反射</p>
+<p>7、java中的语法糖</p>
+<p>8、java8、9、10新特性（主要是8）</p>
+<p>9、java异常</p>
+<p>10、其他零碎知识点（比如创建对象的4种方式）</p>
+<h5 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h5><p>1、创建型模式（5种）</p>
+<p>2、结构性模式（7种）</p>
+<p>3、行为性模式（11种）</p>
+<h5 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h5><p>1、jvm内存结构</p>
+<p>2、类的加载机制</p>
+<p>3、GC算法、分析、优化、工具</p>
+<h4 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h4><p>一、SSM框架</p>
+<ul>
+<li>spring（先使用）</li>
+<li>mybatis</li>
+<li>springmvc</li>
+<li>SSM整合（包括使用maven整合）</li>
+</ul>
+<p>二、相关工具</p>
+<ul>
+<li>maven</li>
+<li>git</li>
+<li>IDEA</li>
+<li>eclipse</li>
+<li>日志框架</li>
+<li>Jenkins</li>
+</ul>
+<p>三、java并发编程（内容比较多）</p>
+<p>四、java网络编程</p>
+<ul>
+<li>序列化</li>
+<li>网络编程基础（主要看书、TCP/IP这些）</li>
+<li>NIO</li>
+<li>netty</li>
+<li>远程调用（RMI、Thrift、gRPC）</li>
+</ul>
+<p>五、数据库</p>
+<ul>
+<li><p>Mysql(本科学)、Oracle</p>
+</li>
+<li><p>nosql（redis、MongoDB）</p>
+</li>
+</ul>
+<h4 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h4><p>一、应用服务器</p>
+<ul>
+<li><p>Tomcat</p>
+</li>
+<li><p>Jboss</p>
+</li>
+<li><p>Jetty</p>
+</li>
+<li><p>Weblogic</p>
+</li>
+</ul>
+<p>二、linux（不需要完成整个运维师的知识、会使用和底层原理）</p>
+<p>三、分布式系统（这里面内容很多、框架也很多）</p>
+<ul>
+<li>Dubbo</li>
+<li>Zookeeper</li>
+<li>三大消息中间件</li>
+<li>分布式缓存</li>
+<li>springSession</li>
+<li>高并发分流ngix</li>
+<li>文件系统fastDFS</li>
+<li>数据扩容mycat</li>
+<li>Docker</li>
+</ul>
+<p>四、微服务架构</p>
+<ul>
+<li>springBoot</li>
+<li>SpringCloud</li>
+</ul>
+<p>五、安全</p>
+<ul>
+<li><p>加密机制</p>
+</li>
+<li><p>shiro安全验证框架</p>
+</li>
+<li><p>其他安全知识</p>
+</li>
+<li><p>一致性算法</p>
+</li>
+</ul>
+<p>其他的还有大数据与云计算等等框架</p>
+]]></content>
+      <tags>
+        <tag>Java Study</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java interview</title>
+    <url>/2020/01/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<p>Java程序员面试题(刷题)</p>
+<a id="more"></a>
+]]></content>
+      <tags>
+        <tag>JAVA Interview</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpringMVC course</title>
+    <url>/2020/01/04/SpringMVC%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>SpringMVC教程(IDEA工具创建Maven工程)</p>
+<a id="more"></a>
+
+<h3 id="入门操作"><a href="#入门操作" class="headerlink" title="入门操作"></a>入门操作</h3><p>目录如下：(target是运行tomcat自建的)：<br><img src="https://img-blog.csdnimg.cn/20200104125119465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>java文件夹设为Source Root<br><img src="https://img-blog.csdnimg.cn/20200104125417340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>resources文件夹设为Resource Root</p>
+]]></content>
+      <tags>
+        <tag>SSM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Segmented storage management</title>
     <url>/2019/12/31/%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<p>分段存储管理方式</p>
@@ -268,7 +442,36 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shiyan5.jsp：</span><br><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;gb2312&quot;%&gt;</span><br><span class="line">&lt;%@ taglib tagdir=&quot;/WEB-INF/tags&quot; prefix=&quot;Mark&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body BGCOLOR=yellow&gt;</span><br><span class="line">  	&lt;font size=&quot;8&quot;&gt;&lt;/font&gt;</span><br><span class="line">  	&lt;Mark:leader height=&quot;5&quot; lower=&quot;10&quot; upper=&quot;8&quot;&gt;&lt;/Mark:leader&gt;</span><br><span class="line">  	leader的面积是：&lt;%=result %&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leader.tag：</span><br><span class="line">&lt;%@ tag pageEncoding=&quot;gb2312&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;upper&quot; required=&quot;true&quot; type=&quot;java.lang.Double&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;lower&quot; required=&quot;true&quot; type=&quot;java.lang.Double&quot; %&gt;</span><br><span class="line">&lt;%@ attribute name=&quot;height&quot; required=&quot;true&quot; type=&quot;java.lang.Double&quot; %&gt;</span><br><span class="line">&lt;%@ variable name-given=&quot;result&quot; variable-class=&quot;java.lang.Double&quot; scope=&quot;AT_END&quot;%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">	double area = (upper+lower)*height/2;</span><br><span class="line">	jspContext.setAttribute(&quot;result&quot;,new Double(area));</span><br><span class="line">	</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
 <p><code>答案2：</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;form action=&quot;&quot; method=&quot;post&quot; name=&quot;form&quot;&gt;</span><br><span class="line">    	输入书名：&lt;INPUT type=&quot;text&quot; name=&quot;bookname&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入书号：&lt;INPUT type=&quot;text&quot; name=&quot;booknumber&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入出版社：&lt;INPUT type=&quot;text&quot; name=&quot;bookplace&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入价格：&lt;INPUT type=&quot;text&quot; name=&quot;bookprice&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	&lt;INPUT TYPE=&quot;submit&quot; value=&quot;提交&quot; name=&quot;submit&quot;&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &lt;br/&gt;</span><br><span class="line">    书名是：</span><br><span class="line">   &lt;%  String name=request.getParameter(&quot;bookname&quot;);</span><br><span class="line">   if(name == null) name = &quot;null&quot;;</span><br><span class="line">   byte b1[]=name.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   name=new String(b1);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=name%&gt; </span><br><span class="line">&lt;BR&gt;书号是:</span><br><span class="line">   &lt;%  String number=request.getParameter(&quot;booknumber&quot;);</span><br><span class="line">   if(number == null) number = &quot;0&quot;;</span><br><span class="line">   byte b2[]=number.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   number=new String(b2);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=number%&gt; </span><br><span class="line">   &lt;br/&gt;</span><br><span class="line">    出版社是：</span><br><span class="line">   &lt;%  String place=request.getParameter(&quot;bookplace&quot;);</span><br><span class="line">   if(place == null) place = &quot;0.0&quot;;</span><br><span class="line">   byte b3[]=place.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   place=new String(b3);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=place%&gt;</span><br><span class="line">   &lt;br/&gt;</span><br><span class="line">    价格是：</span><br><span class="line">   &lt;%  String price=request.getParameter(&quot;bookprice&quot;);</span><br><span class="line">   if(price == null) price = &quot;0.0&quot;;</span><br><span class="line">   byte b4[]=price.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   price=new String(b4);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=price%&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;form action=&quot;&quot; method=&quot;post&quot; name=&quot;form&quot;&gt;</span><br><span class="line">    	输入书名：&lt;INPUT type=&quot;text&quot; name=&quot;bookname&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入书号：&lt;INPUT type=&quot;text&quot; name=&quot;booknumber&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入出版社：&lt;INPUT type=&quot;text&quot; name=&quot;bookplace&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	输入价格：&lt;INPUT type=&quot;text&quot; name=&quot;bookprice&quot;&gt;&lt;br/&gt; </span><br><span class="line">       	&lt;INPUT TYPE=&quot;submit&quot; value=&quot;提交&quot; name=&quot;submit&quot;&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &lt;br/&gt;</span><br><span class="line">    书名是：</span><br><span class="line">   &lt;%  String name=request.getParameter(&quot;bookname&quot;);</span><br><span class="line">   if(name == null) name = &quot;null&quot;;</span><br><span class="line">   byte b1[]=name.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   name=new String(b1);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=name%&gt; </span><br><span class="line">&lt;BR&gt;书号是:</span><br><span class="line">   &lt;%  String number=request.getParameter(&quot;booknumber&quot;);</span><br><span class="line">   if(number == null) number = &quot;0&quot;;</span><br><span class="line">   byte b2[]=number.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   number=new String(b2);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=number%&gt; </span><br><span class="line">   &lt;br/&gt;</span><br><span class="line">    出版社是：</span><br><span class="line">   &lt;%  String place=request.getParameter(&quot;bookplace&quot;);</span><br><span class="line">   if(place == null) place = &quot;0.0&quot;;</span><br><span class="line">   byte b3[]=place.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   place=new String(b3);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=place%&gt;</span><br><span class="line">   &lt;br/&gt;</span><br><span class="line">    价格是：</span><br><span class="line">   &lt;%  String price=request.getParameter(&quot;bookprice&quot;);</span><br><span class="line">   if(price == null) price = &quot;0.0&quot;;</span><br><span class="line">   byte b4[]=price.getBytes(&quot;ISO-8859-1&quot;);</span><br><span class="line">   price=new String(b4);</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;%=price%&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实验九"><a href="#实验九" class="headerlink" title="实验九"></a>实验九</h4><p>1.编写Cubic长方体类，建立JSP页面cubic.jsp使用java bean 三个动作标记，实现输入长方体的三条边，点击提交显示结果如下图所示。参考书上的例题P212(三角形)<br><img src="https://img-blog.csdnimg.cn/20200103185904431.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020010318593078.png" alt="在这里插入图片描述"><br><code>Cubic.java:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Cubic.java</span><br><span class="line">package tom.jiafei;</span><br><span class="line">public class Cubic </span><br><span class="line">&#123;</span><br><span class="line">  private double length;</span><br><span class="line">  private double width;</span><br><span class="line">  private double height;</span><br><span class="line">  private double area; //面积</span><br><span class="line">  private double cubic; //周长</span><br><span class="line">  public void setLength(double length)</span><br><span class="line">  &#123;</span><br><span class="line">	  this.length=length;</span><br><span class="line">  &#125;</span><br><span class="line">  public double getLength()</span><br><span class="line">  &#123;</span><br><span class="line">	  return this.length;</span><br><span class="line">  &#125;</span><br><span class="line">  public void setWidth(double width)</span><br><span class="line">  &#123;</span><br><span class="line">	  this.width=width;</span><br><span class="line">  &#125;</span><br><span class="line">  public double getWidth()</span><br><span class="line">  &#123;</span><br><span class="line">	  return this.width;</span><br><span class="line">  &#125;</span><br><span class="line">  public double getArea()//面积</span><br><span class="line">  &#123;</span><br><span class="line">	  return 2*(length*width+length*height+width*height);</span><br><span class="line">  &#125;</span><br><span class="line">  public double getCubic()//周长</span><br><span class="line">  &#123;</span><br><span class="line">	  return height*length*width;</span><br><span class="line">  &#125;</span><br><span class="line">  public void setHeight(double height) &#123;</span><br><span class="line">  	this.height = height;</span><br><span class="line">  &#125;</span><br><span class="line">  public double getHeight() &#123;</span><br><span class="line">	return height;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Cubic.jsp:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;%@ page import=&quot;tom.jiafei.Cubic&quot;  %&gt;</span><br><span class="line">&lt;jsp:useBean id=&quot;r&quot; class=&quot;tom.jiafei.Cubic&quot; scope=&quot;page&quot; /&gt;</span><br><span class="line">&lt;HTML&gt;&lt;font size=&quot;6&quot;&gt;&lt;BODY &gt;</span><br><span class="line">&lt;FORM action=&quot;&quot; Method=&quot;post&quot;&gt;</span><br><span class="line">&lt;P&gt;输入长方体的长:&lt;Input type=text name=&quot;length&quot; value=0&gt;&lt;/p&gt;</span><br><span class="line">&lt;P&gt;输入长方体的宽:&lt;Input type=text name=&quot;width&quot;  value=0&gt;&lt;/p&gt;</span><br><span class="line">&lt;P&gt;输入长方体的高:&lt;Input type=text name=&quot;height&quot;  value=0&gt;&lt;/p&gt;</span><br><span class="line">&lt;Input type=submit value=&quot;提交&quot;&gt;&lt;/FORM&gt;</span><br><span class="line">&lt;jsp:setProperty name=&quot;r&quot; property=&quot;*&quot; /&gt;</span><br><span class="line">你输入的长是:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;length&quot; /&gt;&lt;br/&gt;</span><br><span class="line">你输入的宽是:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;width&quot; /&gt;&lt;br/&gt;</span><br><span class="line">你输入的高是:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;height&quot; /&gt;&lt;br/&gt;</span><br><span class="line">长方体的面积是：</span><br><span class="line">&lt;jsp:getProperty property=&quot;area&quot; name=&quot;r&quot;/&gt;&lt;br/&gt;</span><br><span class="line">长方体的体积是：</span><br><span class="line">&lt;jsp:getProperty property=&quot;cubic&quot; name=&quot;r&quot;/&gt;&lt;br/&gt;</span><br><span class="line">&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.编写Book类，建立JSP页面book.jsp使用java bean 三个动作标记，实现输入图书信息，点击提交显示结果如下图所示。参考书上的例题P209页7-6。<br><img src="https://img-blog.csdnimg.cn/20200103190002785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200103190029836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><code>Book.java:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package tom.jiafei;</span><br><span class="line">public class Book &#123;</span><br><span class="line">	 private String name;</span><br><span class="line">	 private String number;</span><br><span class="line">	 private double publish;</span><br><span class="line">	 private double price;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setNumber(String number) &#123;</span><br><span class="line">		this.number = number;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getNumber() &#123;</span><br><span class="line">		return number;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPublish(double publish) &#123;</span><br><span class="line">		this.publish = publish;</span><br><span class="line">	&#125;</span><br><span class="line">	public double getPublish() &#123;</span><br><span class="line">		return publish;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPrice(double price) &#123;</span><br><span class="line">		this.price = price;</span><br><span class="line">	&#125;</span><br><span class="line">	public double getPrice() &#123;</span><br><span class="line">		return price;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Book.jsp:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;%@ page import=&quot;tom.jiafei.Book&quot;  %&gt;</span><br><span class="line">&lt;jsp:useBean id=&quot;r&quot; class=&quot;tom.jiafei.Book&quot; scope=&quot;page&quot; /&gt;</span><br><span class="line">&lt;HTML&gt;&lt;BODY &gt;</span><br><span class="line">&lt;FORM action=&quot;&quot; Method=&quot;post&quot;&gt;</span><br><span class="line">&lt;P&gt;输入书名:&lt;Input type=text name=&quot;name&quot; &gt;&lt;/p&gt;</span><br><span class="line">&lt;P&gt;输入书号:&lt;Input type=text name=&quot;number&quot;  &gt;&lt;/p&gt;</span><br><span class="line">&lt;P&gt;输入出版社:&lt;Input type=text name=&quot;publish&quot;  &gt;&lt;/p&gt;</span><br><span class="line">&lt;P&gt;输入价格:&lt;Input type=text name=&quot;price&quot;  &gt;&lt;/p&gt;</span><br><span class="line">&lt;Input type=submit value=&quot;提交&quot;&gt;&lt;/FORM&gt;</span><br><span class="line">&lt;jsp:setProperty name=&quot;r&quot; property=&quot;*&quot; /&gt;</span><br><span class="line">你输入的书名:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;name&quot; /&gt;&lt;br/&gt;</span><br><span class="line">你输入的书号:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;number&quot; /&gt;&lt;br/&gt;</span><br><span class="line">你输入的出版社:</span><br><span class="line">&lt;jsp:getProperty name=&quot;r&quot; property=&quot;publish&quot; /&gt;&lt;br/&gt;</span><br><span class="line">长方体的价格是：</span><br><span class="line">&lt;jsp:getProperty property=&quot;price&quot; name=&quot;r&quot;/&gt;&lt;br/&gt;</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实验十"><a href="#实验十" class="headerlink" title="实验十"></a>实验十</h4><p>1.在mysql中建立数据库books，其中有表：bookinfo(图书表)<br><img src="https://img-blog.csdnimg.cn/20200103190102143.png" alt="在这里插入图片描述"><br>2.创建页面showbook.jsp，加载数据库驱动，在页面以表格形式，显示图书信息。(参考第6章例题-example6_1)<br><img src="https://img-blog.csdnimg.cn/20200103190129391.png" alt="在这里插入图片描述"><br><code>代码:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;%@ page import=&quot;java.sql.*&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;&lt;BODY bgcolor=cyan&gt;</span><br><span class="line"> &lt;% Connection con;//连接</span><br><span class="line">    Statement sql;  //sql</span><br><span class="line">    ResultSet rs;   //结果</span><br><span class="line">    try&#123;  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">    //加载驱动</span><br><span class="line">    &#125;</span><br><span class="line">    catch(Exception e)&#123;&#125;</span><br><span class="line">    try &#123; String uri= &quot;jdbc:mysql://127.0.0.1/warehouse&quot;;</span><br><span class="line">          String user=&quot;root&quot;;</span><br><span class="line">          String password=&quot;root&quot;;</span><br><span class="line">          con=DriverManager.getConnection(uri,user,password);</span><br><span class="line">          //也可以写成con=DriverManager.getConnection(uri+&quot;?user=root&amp;password=&quot;);</span><br><span class="line">          sql=con.createStatement();//创建sql对象</span><br><span class="line">          rs=sql.executeQuery(&quot;SELECT * FROM product &quot;);</span><br><span class="line">          out.print(&quot;&lt;table border=2&gt;&quot;);</span><br><span class="line">          out.print(&quot;&lt;tr&gt;&quot;);</span><br><span class="line">            out.print(&quot;&lt;th width=100&gt;&quot;+&quot;图书名&quot;);</span><br><span class="line">            out.print(&quot;&lt;th width=100&gt;&quot;+&quot;isbn&quot;);</span><br><span class="line">            out.print(&quot;&lt;th width=50&gt;&quot;+&quot;出版社&quot;);</span><br><span class="line">            out.print(&quot;&lt;th width=50&gt;&quot;+&quot;价格&quot;);</span><br><span class="line">             out.print(&quot;&lt;th width=50&gt;&quot;+&quot;版本号&quot;);</span><br><span class="line">          out.print(&quot;&lt;/TR&gt;&quot;);</span><br><span class="line">          while(rs.next())&#123;</span><br><span class="line">            out.print(&quot;&lt;tr&gt;&quot;);</span><br><span class="line">              out.print(&quot;&lt;td &gt;&quot;+rs.getString(1)+&quot;&lt;/td&gt;&quot;); </span><br><span class="line">              out.print(&quot;&lt;td &gt;&quot;+rs.getString(2)+&quot;&lt;/td&gt;&quot;);</span><br><span class="line">              out.print(&quot;&lt;td &gt;&quot;+rs.getString(&quot;出版社&quot;)+&quot;&lt;/td&gt;&quot;); </span><br><span class="line">              out.print(&quot;&lt;td &gt;&quot;+rs.getFloat(&quot;价格&quot;)+&quot;&lt;/td&gt;&quot;);</span><br><span class="line">               out.print(&quot;&lt;td &gt;&quot;+rs.getInt(&quot;版本号&quot;)+&quot;&lt;/td&gt;&quot;);</span><br><span class="line">            out.print(&quot;&lt;/tr&gt;&quot;) ; </span><br><span class="line">          &#125;</span><br><span class="line">          out.print(&quot;&lt;/table&gt;&quot;);</span><br><span class="line">          con.close();//关闭连接</span><br><span class="line">    &#125;</span><br><span class="line">    catch(SQLException e)&#123; </span><br><span class="line">          out.print(e);</span><br><span class="line">    &#125;</span><br><span class="line"> %&gt;</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实验六"><a href="#实验六" class="headerlink" title="实验六"></a>实验六</h4><p>实验目的：</p>
+<p>了解jsp中的内置对象request对象，掌握request对象的常用方法，掌握HTML表单的常用元素，了解response对象的作用，以及方法。能够编写表单处理不同元素的JSP页面。</p>
+<p>实验任务：</p>
+<p>1编写页面 Myrect.jsp 页面中有表单如图1所示。提交表单到get.jsp用表格形式显示结果。使用Rect.tag文件计算矩形面积，get.jsp传递长、宽参数给Rect.tag，之后Rect.tag返回面积结果给get.jsp，get.jsp在表格中显示面积如上图所示。（参考书上例example4_5.jsp）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200103185012585.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200103185048375.png" alt="在这里插入图片描述"></p>
+<p>2、编写页面zhuce.jsp 显示如下表单。其中专业：计算机系统结构，计算机应用，计算机网络。填写的密码由*号显示。（参考课堂练习2) 。结果页面是result.jsp<br>显示用户的注册信息。<br><img src="https://img-blog.csdnimg.cn/20200103185122998.png" alt="在这里插入图片描述"></p>
+<p><code>代码call me (下同)</code></p>
+<h4 id="实验七"><a href="#实验七" class="headerlink" title="实验七"></a>实验七</h4><p>1.使用session实现购物(输入用户名为yin，密码123 登录到shop.jsp页面)<br><img src="https://img-blog.csdnimg.cn/20200103185518188.png" alt="在这里插入图片描述"></p>
+<p>shop.jsp:<br><img src="https://img-blog.csdnimg.cn/20200103185552151.png" alt="在这里插入图片描述"></p>
+<p>account.jsp:<br><img src="https://img-blog.csdnimg.cn/20200103185650409.png" alt="在这里插入图片描述"></p>
+<h4 id="实验八"><a href="#实验八" class="headerlink" title="实验八"></a>实验八</h4><p>一、实验目的<br>掌握JavaBean的编写规范，掌握useBean，setProperty, getProperty等动作标记的使用。<br>二、实验任务<br>1.建立JavaBean  Cubic长方体类。建立shiyan8_1.jsp页面使用useBean 等动作标记实现打印长方体的体积和面积。</p>
+<p>2.建立JavaBean  Book类，(属性：书名，书号，出版社，价格) 。建立shiyan8_2.jsp页面使用useBean 等动作标记实现打印图书信息。</p>
+]]></content>
       <categories>
         <category>front-end</category>
       </categories>
