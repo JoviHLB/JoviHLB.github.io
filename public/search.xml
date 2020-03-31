@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>今日份学习打卡</title>
+    <url>/2020/03/31/%E4%BB%8A%E6%97%A5%E4%BB%BD%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/</url>
+    <content><![CDATA[<p>英语 、算法 、数学</p>
+<a id="more"></a>
+
+<h4 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h4><p><code>每日一句长难句：</code><br><img src="https://img-blog.csdnimg.cn/20200331160700903.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="长难句"></p>
+<p><code>百词斩每日单词：</code><br><img src="https://img-blog.csdnimg.cn/20200331160800288.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="百词斩"></p>
+<p><code>百词斩爱阅读：</code><br><img src="https://img-blog.csdnimg.cn/20200331165219503.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="爱阅读"></p>
+<p><code>刘老师考研英语长难句语法：</code></p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>demo1:<br><img src="https://img-blog.csdnimg.cn/20200331202814912.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">    区间k大数查询</span><br><span class="line"> */</span><br><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner cin = new Scanner(System.in);</span><br><span class="line">        int n = cin.nextInt();</span><br><span class="line">        int a[] = new int[n];</span><br><span class="line">        for (int i=0; i&lt;n; i++) &#123;</span><br><span class="line">            a[i] = cin.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        int m = cin.nextInt();</span><br><span class="line">        int b[][] = new int[m][3];</span><br><span class="line">        for (int i=0; i&lt;m; i++) &#123;</span><br><span class="line">            for (int j=0; j&lt;3; j++) &#123;</span><br><span class="line">                b[i][j] = cin.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i=0; i&lt;m; i++) &#123;</span><br><span class="line">            int c[] = new int[n];</span><br><span class="line">            int index = 0;</span><br><span class="line">            for (int i1:a)</span><br><span class="line">                c[index++] = i1;</span><br><span class="line">            Arrays.sort(c,b[i][0]-1,b[i][1]);</span><br><span class="line">            System.out.println(c[(b[i][1]-b[i][2])]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>demo2:<br><img src="https://img-blog.csdnimg.cn/20200331202911721.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODI0NDAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">    最大最小公倍数</span><br><span class="line"> */</span><br><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner cin = new Scanner(System.in);</span><br><span class="line">        long n = cin.nextLong();</span><br><span class="line">        long max;</span><br><span class="line">        if (n &lt;= 2)</span><br><span class="line">            max = n;</span><br><span class="line">        else if (n % 2 == 1) // 奇数 偶数 奇数(互质最大) 9 8 7</span><br><span class="line">            max = n*(n-1)*(n-2);</span><br><span class="line">        else if (n % 3 == 0) // 30 29 28 (30 28 分2) 30 29 27(30 27分3) 故29 28 27</span><br><span class="line">            max = (n-1)*(n-2)*(n-3);</span><br><span class="line">        else // 其他N偶数 则避免分2 因此丢掉第二个偶数 16 15 13</span><br><span class="line">            max = n*(n-1)*(n-3);</span><br><span class="line">        System.out.println(max);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h4><p>泰勒公式其8倒背如流</p>
+]]></content>
+      <tags>
+        <tag>Review the content</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>考研复习资源就绪~</title>
     <url>/2020/03/30/2021%E8%80%83%E7%A0%94%E5%A4%8D%E4%B9%A0%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<p>此为基础阶段复习方式：</p>
 <a id="more"></a>
 <h4 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h4><p>张宇2021考研数学基础30讲 <a href="https://www.bilibili.com/video/BV1g7411u79d" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1g7411u79d</a><br>30讲电子版(建议买实体书)<a href="https://pan.baidu.com/s/1KQxLn5o5QjOP9qmf6VEbrA" target="_blank" rel="noopener">https://pan.baidu.com/s/1KQxLn5o5QjOP9qmf6VEbrA</a> 提取码:hi1u</p>
-<h4 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h4><p>5500单词： “百词斩”<br>每日一句长难句 ： 微信公众号 “凯文考研英语长难句每日一句”</p>
+<h4 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h4><p>5500单词： “百词斩”<br>每日一句长难句 ： 微信公众号 “凯文考研英语长难句每日一句”<br>长难句讲解：(刘晓燕老师) <a href="https://www.bilibili.com/video/BV1fJ411b7EV" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1fJ411b7EV</a> </p>
 <h4 id="专业综合和政治"><a href="#专业综合和政治" class="headerlink" title="专业综合和政治"></a>专业综合和政治</h4><p>将会在 6 月后进行复习</p>
 ]]></content>
       <tags>
@@ -391,22 +412,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Computer network architecture</title>
-    <url>/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<p>计算机网络体系结构</p>
-<a id="more"></a>
-<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>网络协议：</p>
-<p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议。</p>
-<p>划分层次：</p>
-<p>1.语法：即数据与控制信息的结构或格式</p>
-<p>2.语义：即需要发出何种信息，完成何种动作以及做出何种反应</p>
-<p>3.同步：即事件实现顺序的详细说明</p>
-]]></content>
-      <tags>
-        <tag>Computer Network</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Maven project introduce</title>
     <url>/2019/12/06/maven%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<p>Maven项目介绍</p>
@@ -469,25 +474,6 @@
 <h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><pre><code>“先进先出，后进后出”</code></pre>]]></content>
       <tags>
         <tag>DS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Von neumann architecture</title>
-    <url>/2019/12/02/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<p>冯诺依曼体系结构</p>
-<a id="more"></a>
-<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>(1)采用存储程序方式，指令和数据不加区别混合存储在同一个存储器中，数据和程序在内存中是没有区别的,它们都是内存中的数据,当EIP指针指向哪 CPU就加载那段内存中的数据,如果是不正确的指令格式,CPU就会发生错误中断. 在现在CPU的保护模式中,每个内存段都有其描述符,这个描述符记录着这个内存段的访问权限(可读,可写,可执行).这就变相的指定了哪些内存中存储的是指令哪些是数据）指令和数据都可以送到运算器进行运算，即由指令组成的程序是可以修改的。</p>
-<p>(2)存储器是按地址访问的线性编址的一维结构，每个单元的位数是固定的。</p>
-<p>(3)指令由操作码和地址组成。操作码指明本指令的操作类型,地址码指明操作数和地址。操作数本身无数据类型的标志，它的数据类型由操作码确定。</p>
-<p>(4)通过执行指令直接发出控制信号控制计算机的操作。指令在存储器中按其执行顺序存放，由指令计数器指明要执行的指令所在的单元地址。指令计数器只有一个，一般按顺序递增，但执行顺序可按运算结果或当时的外界条件而改变。</p>
-<p>(5)以运算器为中心，I/O设备与存储器间的数据传送都要经过运算器。</p>
-<p>(6)数据以二进制表示。</p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>(1)计算机处理的数据和指令一律用二进制数表示</p>
-<p>(2)顺序执行程序:<br>    计算机运行过程中，把要执行的程序和处理的数据首先存入主存储器（内存），计算机执行程序时，将自动地并按顺序从主存储器中取出指令一条一条地执行，这一概念称作顺序执行程序。</p>
-<p>(3)计算机硬件由运算器、控制器、存储器、输入设备和输出设备五大部分组成。</p>
-]]></content>
-      <tags>
-        <tag>Principles Of Computer Composition</tag>
       </tags>
   </entry>
   <entry>
